@@ -1,5 +1,5 @@
 # itgirlschool_ssstvch
-Домашние заданиz школы ITGirlSchool
+Домашние задания школы ITGirlSchool
 
 Добавляем новый текст!
 
