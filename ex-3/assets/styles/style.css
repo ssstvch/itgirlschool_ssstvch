@@ -291,6 +291,10 @@ header {
     margin: 0 200px;
 }
 
+.question button {
+    background-color: #fff;
+}
+
 #start-2 {
     background-color: #692340;
     color: #FBEECA;
