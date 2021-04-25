@@ -1,1 +1,415 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+    color: #692340;
+}
+
+body a {
+    text-decoration: none;
+    color: #692340;
+}
+
+body li {
+    list-style-type: none;
+}
+
+body ul {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #241C15;
+    padding: 22px 45px;
+}
+
+#header-nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header-nav li {
+    padding-right: 45px;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.btn {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    padding: 12px 30px;
+    background-color: #fff;
+    border: 1px solid black;
+}
+
+#btn-green {
+    background-color:#007C89;
+    color: #fff;
+    margin-left: 40px;
+    border: 0;
+}
+
+#first-screen {
+    background-image: url(../images/background.png);
+    background-size: 100vw;
+
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+}
+
+#first-screen-nav ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 45px;
+}
+
+#first-screen-nav {
+    margin: 50px 50px;
+}
+
+#first-screen-nav li {
+    padding-left: 30px;
+    color: #241C15;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+#first-screen-nav a:hover {
+    color: #692340;
+    border-bottom: 1px solid #692340;
+    padding-bottom: 6px;
+}
+
+#first-screen-text {
+    margin-left: 145px;
+}
+
+#first-screen-text h1 {
+    font-weight: 500;
+    font-size: 74px;
+    line-height: 74px;
+    margin: 100px 0 40px 0;
+}
+
+.text {
+    width: 640px;
+    font-size: 20px;
+    line-height: 28px;
+    margin: 0 0 40px 0;
+}
+
+#btn-red {
+    background-color: #692340;
+    color: #FBEECA;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.explanation {
+    font-size: 14px;
+    margin: 0 0 180px 0;
+}
+
+.h2 {
+    font-weight: bold;
+    font-size: 51px;
+    line-height: 54px;
+    text-align: center;
+    margin-top: 130px;
+}
+
+.center-text {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    width: 675px;
+    margin: 0 auto;
+}
+
+#benefits-spec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 120px auto;
+
+}
+
+.benefit {
+    text-align: center;
+    width: 260px;
+}
+
+.benefit h3{
+    font-size: 24px;
+    line-height: 31px;
+}
+
+.benefit p {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+#users {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 200px 120px 200px;
+}
+
+#users-text {
+    width: 500px;
+}
+
+#users-text h3 {
+    font-size: 112px;
+    line-height: 150px;
+    text-align: center;
+    font-weight: normal;
+    margin: 0;
+    padding-bottom: 50px;
+}
+
+#users-text-1 {
+    font-size: 39px;
+    line-height: 44px;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+#users-text-2 {
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    margin: 0;
+}
+
+.h2-normal {
+    font-weight: 400;
+    font-size: 51px;
+    line-height: 54px;
+    text-align: center;
+    margin-top: 130px;
+}
+
+.center-text-normal {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    width: 675px;
+    margin: 0 auto;
+}
+
+.start-steps {
+    display: flex;
+    justify-content: space-around;
+    margin: 120px 200px;
+}
+
+.start-steps-text {
+    width: 600px;
+}
+
+.start-steps-text h3 {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 44px;
+}
+
+.start-step-text p {
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.start-step-text li {
+    font-size: 16px;
+    line-height: 22px;
+}
+
+#account {
+    background-color: #FBEECA;
+    display: flex;
+    flex-direction: column;
+}
+
+.transparent {
+    background-color: #FBEECA;
+    width: max-content;
+    margin: 30px auto 215px auto;
+    color: #692340;
+    border: 1px solid #692340;
+    padding: 20px 40px;
+}
+
+#publishes {
+    display: flex;
+    justify-content: space-between;
+    margin: 120px;
+}
+
+.publish {
+    width: 355px;
+}
+
+.publish h4 {
+    font-size: 24px;
+    line-height: 55px;
+}
+
+.publish h3 {
+    font-size: 27px;
+    line-height: 29px;
+}
+
+.publish p {
+    font-size: 18px;
+    line-height: 29px;
+}
+
+#questions {
+    display: flex;
+    justify-content:center;
+    margin-bottom: 100px;
+}
+
+.question {
+    width: 170px;
+    text-align: center;
+    margin: 0 200px;
+}
+
+#start-2 {
+    background-color: #692340;
+    color: #FBEECA;
+    display: flex;
+    flex-direction: column;
+}
+
+#start-2 h2 {
+    font-weight: normal;
+    font-size: 74px;
+    line-height: 74px;
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 115px 0 35px 0;
+    margin: 0 auto;
+    width: 530px;
+}
+
+#start-2-text {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    margin: 0;
+}
+
+#yellow {
+    background-color: #FBEECA;
+    color: #692340;
+    margin-bottom: 20px;
+}
+
+#yellow-text {
+    color: #FBEECA;
+    text-align: center;
+}
+
+footer {
+    background-color: #EFEEEA;
+    color: #241C15;
+}
+
+#first-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid #8C8C8C;
+    padding: 120px 200px 75px 200px;
+}
+
+#presents {
+    width: 175px;
+}
+
+.column h3 {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 16px;
+    padding-bottom: 25px;
+}
+
+.column li {
+    font-size: 13px;
+    line-height: 18px;
+    color: #241C15;
+    padding-bottom: 15px;
+}
+
+.learn-more p {
+    font-size: 12px;
+    line-height: 19px;
+}
+
+.learn-more {
+    margin-bottom: 70px;
+}
+
+#second-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 65px 270px 120px 270px;
+}
+
+#download {
+    display: flex;
+    justify-content: start;
+}
+
+#download img {
+    padding-right: 30px;
+}
+
+#social {
+    display: flex;
+    justify-content: start;
+    margin: 0 75px;
+}
+
+#social img {
+    
+    padding-right: 24px;
+}
+
+#footer-btn {
+    border: 1px solid #403B3B;
+    color: #403B3B;
+    background-color: #EFEEEA;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 13px 0.5px;
+}
+
+#footer-text {
+    font-size: 10px;
+    line-height: 15px;
+    width: 300px;
+}
+
+#copyright p {
+    font-size: 10px;
+    line-height: 15px;
+}
