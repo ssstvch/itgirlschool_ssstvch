@@ -141,7 +141,7 @@ header {
 #benefits-spec {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
     margin: 120px auto;
 
 }
