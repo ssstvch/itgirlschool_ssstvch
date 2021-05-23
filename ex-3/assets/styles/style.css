@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: Montserrat;
+}
+
+body a {
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    background-color: #FED100;
+    display: grid;
+    grid-template: 5em 1fr / 1fr 1fr;
+    width: max-width;
+}
+
+.header {
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+.content-header {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.man {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.header-grid {
+    display: grid;
+    grid-column: repeat(3, 1fr);
+}
+
+.logo {
+    grid-column: 1 / 2;
+    margin: 1em;
+}
+
+.menu-header {
+    grid-column: 2 / 3;
+}
+
+.phone {
+    grid-column: 3 / 4;
+    text-align: right;
+    font-weight: 700;
+    font-size: 18pt;
+    margin-right: 1em;
+}
+
+.phone a {
+    border-bottom: 1px solid black;
+}
+
+.menu-header {
+    display: grid;
+    grid-column: repeat(4, 1fr);
+    text-align: center;
+}
+
+.href {
+    margin: 1.5em 0 1em 0;
+}
+
+.href1 {
+    grid-column: 1 / 2;
+}
+
+.href2 {
+    grid-column: 2 / 3;
+}
+
+.href3 {
+    grid-column: 3 / 4;
+}
+
+.href4 {
+    grid-column: 4 / 5;
+}
+
+.content-header {
+    margin-left: 1em;
+    display: grid;
+    grid-row: 2fr 1fr 1fr;
+}
+
+.header-text {
+    grid-row: 1 / 2;
+}
+
+.button {
+    grid-row: 2 / 3;
+}
+
+.advantages {
+    grid-row: 3 / 4;
+}
+
+.h1-header {
+    font-size: 4.4em;
+    margin: 1.3em 0 0 0;
+}
+
+.header-text h2 {
+    font-size: 1.9em;
+    font-weight: 600;
+    margin: 0;
+}
+
+.btn {
+    background-color: #FF352B;
+    font-family: Montserrat;
+    font-size: 1.5em;
+    color: white;
+    padding: 1em 6em;
+    border: 0;
+    font-weight: 600;
+    margin-top: 2em;
+}
+
+.advantages {
+    width: 40em;
+    display: grid;
+    grid-column: repeat(3, 1fr);
+    gap: 3em;
+    margin: 4em 0;
+}
+
+.advantages1 {
+    grid-column: 1 / 2;
+    display: grid;
+}
+
+.advantages1 img {
+    grid-column: 1 / 2;
+}
+
+.advantages1 p {
+    grid-column: 2 / 3;
+    margin: 0;
+}
+
+.advantages2 {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-column: repeat(2, 1fr);
+}
+
+.advantages2 img {
+    grid-column: 1 / 2;
+}
+
+.advantages2 p {
+    grid-column: 2 / 3;
+    margin: 0;
+}
+
+.advantages3 {
+    grid-column: 3 / 4;
+    display: grid;
+    grid-column: repeat(2, 1fr);
+}
+
+.advantages3 img {
+    grid-column: 1 / 2;
+}
+
+.advantages3 p {
+    grid-column: 2 / 3;
+    margin: 0;
+}
+
+.instruction {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+}
+
+.h2-instruction {
+    grid-area: 1 / 1 / 2 / 3;
+    margin: 3em auto 2em auto;
+}
+
+.p1 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.p2 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.p3 {
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+.p4 {
+    grid-area: 3 / 2 / 4 / 3;
+}
