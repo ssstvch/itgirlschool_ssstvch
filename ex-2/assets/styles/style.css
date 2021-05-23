@@ -1,13 +1,13 @@
 @font-face {
-    font-family: KleinCondensed;
-    src: url(/ex-2/assets/styles/fonts/KleinCondensed-Bold.ttf);
+    font-family: KleinCondensed-Bold;
+    src: url(./fonts/KleinCondensed-Bold.ttf);
 }
 
 body {
     margin: 0;
     padding: 0;
     background-color: #E1E0E1;
-    font-family: KleinCondensed;
+    font-family: KleinCondensed-Bold;
     text-align: center;
 }
 
