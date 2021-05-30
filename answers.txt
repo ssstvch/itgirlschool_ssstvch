@@ -1,92 +1,31 @@
-Ответы на вопросы к week-6
+1.  Добавить в head страницы метатег viewport
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
- 1. Единица измерения fr - это единица гибкости. Она делит свободное в сетке пространство на доли.
+2.  Отзывчивый дизайн - это проектирование сайта на основе одного макета с подвижной сеткой, который автоматически подстраивается по разную ширину  девайсов.
+    Адаптивный дизайн - это проектирование сайта с разными макетами фиксированной ширины, которые меняются в зависимости от ширины устройства.
 
- 2. .container1 {
-        display: grid;
-        grid-template-columns: repeat(5, 20%); 
-    }
-    
-    .container2 {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-    }
+3.  vw, vh - единицы измерения, базирующиеся на viewport.
 
- 3. Auto-fill и auto-fit используются как значения при указании ширины колонок в CSS Grid. Они ведут себя почти одинаково, заполняя стоку максимальным количеством колонок заданной ширины. Единственное отличие - это поведение при использовании minmax(). Auto-fill оставшееся место без элементов делит поровну между автозаполненными колонками (они пустые, но они есть и имеют размер), а auto-fit ширину пустых колонок делает нулевой, и есть максимальная ширина колонок указана 1fr, то свободное место будет поделено между заполненными колонками (с элементами).
+4.  Отзывчивый дизайн. Шаблон - Layout Shifter.
 
- 4. .table {
-        display: grid;
-        grid-template-columns: 100px 30% 1fr;
-        grid-template-rows: 200px 100px;
-        gap: 5px; 
-    }
+5.  @media (min-width:800px) and (max-wisth:1200px) { CSS };
 
-    .el-1 { 
-        grid-area: 1 / 1 / 2 / 2; 
-    }
-    .el-2 { 
-        grid-area: 1 / 2 / 2 / 3; 
-    }
-    .el-3 { 
-        grid-area: 1 / 3 / 2 / 4; 
-    }
-    .el-4 { 
-        grid-area: 2 / 1 / 3 / 2; 
-    }
-    .el-5 { 
-        grid-area: 2 / 2 / 3 / 3; 
-    }
-    .el-6 { 
-        grid-area: 2 / 3 / 3 / 4; 
-    }
+6.  Через тег link: <link rel="stylesheet" media="screen" href="screen-size.css">;
+    Через import в файле style.css: @import url(screen-size.css) screen;
 
-5. С помощью justify-content: space-between;
+7.  Сделать изображения на сайте гибкими можно, например, с помощью атрибутов тега <img> - srcset и sizes. Где srcset       включает в себя названия изображений, пробел и размер изображения в пикселях, но вместо пикселей указываем w(скращение width). А sizes включает в себя медиазапрос, пробел и ширина слота под изображение в пикселях. Изобажения и медиазапросы указываются от меньшего к большему. В атрибуте sizes последний медиазапрос (самый большой размер изображения) можно не указывать, указать только максимальный размер изображения.
 
-6. Grid-area это сокращённая форма записи свойств для определения местопооложения grid элемента в контейнере. Задаётся в следующем порядке: 
-    .el {
-        grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end;
-    }
+    Также сделать изображения гибки можно через тег <picture></picture>. В него включить несколько тегов <sourse> с атрибутами srcset (название изображения) и media (указание max-width). И в конце последний тег <sourse> с атрибутом srcset и следом за ним тег <img> с максимальным размером изображения. 
 
-7. .table {
-        display: grid;
-        grid-template-areas:
-            "one one one one"
-            "two three three three"
-            "four four five five"
-            "six six six six";
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(4, 200px);
-    }
+8.  @media (orientation: landscape) { CSS }
+    landscape и portrait это ориентация экрана - вертикальная(высота больше ширины) или горизонтальная(ширина больше высоты);
 
-    .one {
-        grid-area: one;
-    }
+9.  Тестировать адаптивность:
+        1) Google Mobile Friendly;
+        2) Google для разработчиков;
+        3) Quirktools;
+        4) Iloveadaptive;
+        5) Adaptivator.
 
-    .two {
-        grid-area: two;
-    }
+10. Указала в пункте 7.
 
-    .three {
-        grid-area: three;
-    }
-
-    .four {
-        grid-area: four;
-    }
-
-    .five {
-        grid-area: five;
-    }
-
-    .six {
-        grid-area: six;
-    }
-
-8. С помощью функции repeat() со значением количества колонок auto-fit и размером, заданным функцией minmax();
-
-9. Наименование линий используется для удобства определения сетки (вместо чисел). Имя присваивается только линии, не треку до/после нее. Именованные линии прописываются в grid-template(-column/-rows) в квадратных скобках. Именовать линии желательно по названию блока (main, content, header, sidebar, footer и т.д.) с добавлением суффикса -start/-end. Линия может быть -start для одного блока и -end для другого, для этого линии нужно задать два имени через пробел: 
-    .el {
-        grid-template-columns: [main-start sidebar-start] 1fr [sidebar-end content-start] 2fr [content-end main-end]
-    }
-
-10. grid-template: repeat(12, 1fr);

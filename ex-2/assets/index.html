@@ -6,30 +6,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/style.css">
-    <title>Grid Layout</title>
+    <title>MOVEE</title>
 </head>
-<body class="body-grid">
-    <header class="header">
-        <h1>[Шапка страницы]</h1>
-    </header>
-    <main class="main main-grid">
-            <h2>
-                [Основная часть]
-            </h2>
-            <div class="more-grid">
-                <div class="more more1"><p>[Ещё 1]</p></div>
-                <div class="more more2"><p>[Ещё 2]</p></div>
-                <div class="more more3"><p>[Ещё 3]</p></div>
+<body>
+    <header>
+        <div class="header header-grid">
+            <h2 class="logo">MOVEE</h2>
+            <nav class="menu-header">
+                <a class="href href1" href="#">Цены</a>
+                <a class="href href2" href="#">Автопарк</a>
+                <a class="href href3" href="#">Отзывы</a>
+                <a class="href href4" href="#">Контакты</a>
+            </nav>
+            <p class="phone"><a href="#">8(800)-080-12-13</a></p>
+        </div>
+        <div class="content-header">
+            <div class="header-text">
+                <h1 class="h1-header">Квартирные <br /> переезды</h1>
+                <h2>По Москве и области</h2>
             </div>
+            <div class="button">
+                <button class="btn">Заказать</button>
+            </div>
+            <div class="advantages">
+                <div class="advantages1">
+                    <img src="./images/truck.svg" alt="truck">
+                    <p>Более 800 <br /> переездов</p>
+                </div>
+                <div class="advantages2">
+                    <img src="./images/triggerTwo.svg" alt="triggerTwo">
+                    <p>Бережная <br /> упаковка</p>
+                </div>
+                <div class="advantages3">
+                    <img src="./images/money.svg" alt="triggerTwo">
+                    <p>Фиксированная <br /> цена</p>
+                </div>
+            </div>
+        </div>
+        <div class="man">
+            <img src="./images/man.png" alt="man">
+        </div>
+    </header>
+    <main>
+        <div class="instruction">
+            <h2 class="h2-instruction">Как это происходит?</h2>
+            <div class="p1">
+                <p class="number">01</p>
+                <h3 class="h3-instruction">Оценка объема предстоящих работ</h3>
+                <p class="text-instruction">Стоимость переезда зависит от количества комнат, вещей и мебели.</p>
+            </div>
+            <div class="p2">
+                <p class="number">02</p>
+                <h3 class="h3-instruction">Упаковка вещей</h3>
+                <p class="text-instruction">Упаковываем вещи в коробки, подписываем. Габаритное и деликатное, упаковываем отдельно.</p>
+            </div>
+            <div class="p3">
+                <p class="number">03</p>
+                <h3 class="h3-instruction">Погрузка и транспортировка вещей</h3>
+                <p class="text-instruction">В нашем автопарке имеются машины, подходящие для мебели любых габаритов.</p>
+            </div>
+            <div class="p4">
+                <p class="number">04</p>
+                <h3 class="h3-instruction">Распаковка и расстановка мебели</h3>
+                <p class="text-instruction">Опытные грузчики быстро расставят мебель и уберут мусор от распаковки.</p>
+            </div>
+        </div>
     </main>
-    <aside class="aside">
-            <h2>[Бововая область]</h2>
-    </aside>
-    <footer class="footer footer-grid">
-        <div class="sec-foot sec-foot1"><p>[Секция футера 1]</p></div>
-        <div class="sec-foot sec-foot2"><p>[Секция футера 2]</p></div>
-        <div class="sec-foot sec-foot3"><p>[Секция футера 3]</p></div>
-        <div class="sec-foot sec-foot4"><p>[Секция футера 4]</p></div>
+    <footer>
+        <div class="first-column">
+            <h2>MOVEE</h2>
+            <p><a href="#">Политика конфиденциальности</a></p>
+            <p><a href="#">Соглашение на обработку персональных данных</a></p>
+        </div>
+        <div class="second-column">
+            <ul>
+                <li><a href="#"></a>Главная</li>
+                <li><a href="#"></a>Цена</li>
+                <li><a href="#"></a>Автопарк</li>
+                <li><a href="#"></a>Отзывы</li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="third-column">
+            <a href="#"><img src="./images/youtube.svg#" alt="YouTube"></a>
+            <a href="#"><img src="./images/vk.svg" alt="VK"></a>
+            <a href="#"><img src="./images/fb.svg" alt="Facebook"></a>
+            <a href="#"><img src="./images/insta.svg" alt="Instagram"></a> <br />
+            <a href="#" class="email">hello@movee.ru</a>
+        </div> 
+        <div class="fourth-column">
+            <button>Обратный звонок</button> <br />
+            <p class="phone-footer"><a href="#">
+                8 (800)-080-12-13</a></p>
+        </div>
     </footer>
 </body>
 </html>
