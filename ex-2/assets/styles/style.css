@@ -70,7 +70,7 @@ body {
 
 .footer-grid {
     display: grid;
-    grid-column: 4fr;
+    grid-template-columns: repeat(4, 1fr);
     gap: 2em;
     margin: 2em;
 }

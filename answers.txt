@@ -1,0 +1,92 @@
+Ответы на вопросы к week-6
+
+ 1. Единица измерения fr - это единица гибкости. Она делит свободное в сетке пространство на доли.
+
+ 2. .container1 {
+        display: grid;
+        grid-template-columns: repeat(5, 20%); 
+    }
+    
+    .container2 {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+ 3. Auto-fill и auto-fit используются как значения при указании ширины колонок в CSS Grid. Они ведут себя почти одинаково, заполняя стоку максимальным количеством колонок заданной ширины. Единственное отличие - это поведение при использовании minmax(). Auto-fill оставшееся место без элементов делит поровну между автозаполненными колонками (они пустые, но они есть и имеют размер), а auto-fit ширину пустых колонок делает нулевой, и есть максимальная ширина колонок указана 1fr, то свободное место будет поделено между заполненными колонками (с элементами).
+
+ 4. .table {
+        display: grid;
+        grid-template-columns: 100px 30% 1fr;
+        grid-template-rows: 200px 100px;
+        gap: 5px; 
+    }
+
+    .el-1 { 
+        grid-area: 1 / 1 / 2 / 2; 
+    }
+    .el-2 { 
+        grid-area: 1 / 2 / 2 / 3; 
+    }
+    .el-3 { 
+        grid-area: 1 / 3 / 2 / 4; 
+    }
+    .el-4 { 
+        grid-area: 2 / 1 / 3 / 2; 
+    }
+    .el-5 { 
+        grid-area: 2 / 2 / 3 / 3; 
+    }
+    .el-6 { 
+        grid-area: 2 / 3 / 3 / 4; 
+    }
+
+5. С помощью justify-content: space-between;
+
+6. Grid-area это сокращённая форма записи свойств для определения местопооложения grid элемента в контейнере. Задаётся в следующем порядке: 
+    .el {
+        grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end;
+    }
+
+7. .table {
+        display: grid;
+        grid-template-areas:
+            "one one one one"
+            "two three three three"
+            "four four five five"
+            "six six six six";
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 200px);
+    }
+
+    .one {
+        grid-area: one;
+    }
+
+    .two {
+        grid-area: two;
+    }
+
+    .three {
+        grid-area: three;
+    }
+
+    .four {
+        grid-area: four;
+    }
+
+    .five {
+        grid-area: five;
+    }
+
+    .six {
+        grid-area: six;
+    }
+
+8. С помощью функции repeat() со значением количества колонок auto-fit и размером, заданным функцией minmax();
+
+9. Наименование линий используется для удобства определения сетки (вместо чисел). Имя присваивается только линии, не треку до/после нее. Именованные линии прописываются в grid-template(-column/-rows) в квадратных скобках. Именовать линии желательно по названию блока (main, content, header, sidebar, footer и т.д.) с добавлением суффикса -start/-end. Линия может быть -start для одного блока и -end для другого, для этого линии нужно задать два имени через пробел: 
+    .el {
+        grid-template-columns: [main-start sidebar-start] 1fr [sidebar-end content-start] 2fr [content-end main-end]
+    }
+
+10. grid-template: repeat(12, 1fr);
