@@ -1,6 +1,39 @@
-html {
-  max-width: 1800px;
+body {
   margin: 0 auto;
   padding: 0;
+}
+
+.calculate {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 60%;
+}
+
+.btn {
+  margin: 2vw 4vw;
+  padding: 5vw;
+  border: 1px solid black;
+  border-radius: 30px;
+}
+
+.btn_img {
+  width: 7vw;
+}
+
+.btn_svg {
+  width: 100%;
+}
+
+.btn:hover {
+  -webkit-box-shadow: 13px 18px 47px -26px rgba(34, 60, 80, 0.6);
+  box-shadow: 13px 18px 47px -26px rgba(34, 60, 80, 0.6);
+  border: 2px solid black;
 }
 /*# sourceMappingURL=style.css.map */
