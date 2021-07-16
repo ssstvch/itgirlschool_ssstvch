@@ -1,5 +1,31 @@
-html {
-    max-width: 1800px;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+$fontFamily: 'Montserrat', sans-serif;
+$fontSize: 2vw;
+
+
+main {
     margin: 0 auto;
     padding: 0;
+    font-family: $fontFamily;
+}
+
+.btn {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.btn_click {
+    margin-top: 10vw;
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    padding: 4vw 8vw;
+    border: none;
+    background-color: #F6D330;
+    color: #CC2229;
+}
+
+.btn_click:hover {
+    border: 1px solid #cc222896;
 }

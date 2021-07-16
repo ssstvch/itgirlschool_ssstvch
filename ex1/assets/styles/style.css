@@ -1,6 +1,31 @@
-html {
-  max-width: 1800px;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+main {
   margin: 0 auto;
   padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.btn {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.btn_click {
+  margin-top: 10vw;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2vw;
+  padding: 4vw 8vw;
+  border: none;
+  background-color: #F6D330;
+  color: #CC2229;
+}
+
+.btn_click:hover {
+  border: 1px solid #cc222896;
 }
 /*# sourceMappingURL=style.css.map */
