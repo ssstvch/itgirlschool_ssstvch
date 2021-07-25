@@ -1,0 +1,67 @@
+1.  function func1(name) {
+        console.log(`Hi, ${name}!`);
+    }
+
+    let func2 = (name) => console.log(`Hi, ${name}!`);
+
+    let func3 = () => {
+        let text = `Hi, ${name}!`;
+        return text;
+    };
+
+    let func4 = name = console.log(`Hi, ${name}!`);
+
+2.  Тестирование - процесс поиска ошибок в программе, может быть ручной или автоматизированный.
+    Отладка же всегда ручной процесс поиска и исправления (что самое главное) конкретной ошибки.
+    Логирование это запись куда-то данных о процессе работы программы. Чаще всего  об ошибках и критических ошибках.
+
+3.  Function Declaration - синтаксис: function Name() { }, написать функцию можно в любом месте кода, движок JS считывает функции в первую очередь, поэтому и вызвать функцию можно до её объявления.
+    Function Expression - синтаксис: let Name = function() { }, объявление через переменную, которую мы задаём сами, вызвать функцию до её объявления нельзя, т.к. функцию содержится в переменной, а их движок JS читает по порядку.
+
+4.  console.log() выводит сообщение в консоль, скрывая от пользователей.
+
+5.  BOM - browser ibject model. Объектная модель браузера, включает свойства и методы, предоставленные браузером, чтобы JavaScript могу взимодействовать с браузером.
+    DOM - document object model. Древовидная модель объектов, где находит всё содержимое страницы. Позволяет программам и сценариям динамически получать доступ и обновлять содержимое, структуру и стиль документа.
+
+6.  let table = document.getElementById('age-table');
+    let labels = document.getElementsByTagName('label');
+    let form = document.getElementsByName('search');
+
+7.  С помощью аттрибута onclick = "clickMe()" с теге button.
+    Сама функция: 
+    function clickMe() {
+        location.href('ссылка');
+    }
+
+8.  HTML:
+        <form>
+            <input type="text" id="input" />
+            <button id="btn" type="reset" onclick ="clickMe()">Отправить</button>
+        </form>
+    JS:
+        'use strict'
+
+        let arr = []; // массив для того, чтобы видеть, что данные сохраняются, а не просто удаляются из поля
+        function clickMe() {
+                let text_input = document.getElementById("input").value;
+                arr.push(text_input);
+                text_input = '';
+                console.log(arr);
+        }
+
+9.  this - ключевое слово в JavaScript, его поведение зависит от контекста (глобально, в функции, в объекте) и строго/нестрогого режима. Буквально он означает обращение элемента к себе (если я правильно всё поняла).
+    В контексте функций поведение this зависит от режима. В несторогом режиме this с неустановленным значением будет объектом global, чем в браузере является window. В сторогом режиме при тех же условиях будет undefined.
+
+10. let name = () => prompt(`What is your name?`, `Name`);
+
+    console.log(typeof name);
+    if (name) {
+        alert(`Вы не ввели имя пользователя`);
+    }  else { 
+        alert(`Hello, ${name}!`);
+    }
+
+
+
+    
+
