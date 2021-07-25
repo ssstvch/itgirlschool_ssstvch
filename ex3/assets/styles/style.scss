@@ -1,0 +1,32 @@
+.slider {
+    margin: auto 0;
+    &_list {
+        position: relative;
+        list-style-type: none;
+    }
+    &_slide {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        opacity: 0;
+        z-index: 1;
+        -webkit-transition: opacity 2s;
+        -moz-transition: opacity 2s;
+        -o-transition: opacity 2s;
+        transition: opacity 2s;
+    }
+    &_img_box {
+        width: 500px;
+    }
+    &_image {
+        width: 100%;
+    }
+    &_arrows {
+        margin-top: 15px;
+    }
+}
+
+.showing {
+    opacity: 1;
+    z-index: 2;
+}
