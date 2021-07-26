@@ -4,12 +4,9 @@
 
     let func2 = (name) => console.log(`Hi, ${name}!`);
 
-    let func3 = () => {
-        let text = `Hi, ${name}!`;
-        return text;
+    let func3 = function (){
+        console.log(`Hi, ${name}!`)
     };
-
-    let func4 = name = console.log(`Hi, ${name}!`);
 
 2.  Тестирование - процесс поиска ошибок в программе, может быть ручной или автоматизированный.
     Отладка же всегда ручной процесс поиска и исправления (что самое главное) конкретной ошибки.
@@ -24,8 +21,8 @@
     DOM - document object model. Древовидная модель объектов, где находит всё содержимое страницы. Позволяет программам и сценариям динамически получать доступ и обновлять содержимое, структуру и стиль документа.
 
 6.  let table = document.getElementById('age-table');
-    let labels = document.getElementsByTagName('label');
-    let form = document.getElementsByName('search');
+    let labels = document.querySelectorAll('#age-table label');
+    let form = document.querySelector("form[name='search-person']");
 
 7.  С помощью аттрибута onclick = "clickMe()" с теге button.
     Сама функция: 
@@ -52,13 +49,14 @@
 9.  this - ключевое слово в JavaScript, его поведение зависит от контекста (глобально, в функции, в объекте) и строго/нестрогого режима. Буквально он означает обращение элемента к себе (если я правильно всё поняла).
     В контексте функций поведение this зависит от режима. В несторогом режиме this с неустановленным значением будет объектом global, чем в браузере является window. В сторогом режиме при тех же условиях будет undefined.
 
-10. let name = () => prompt(`What is your name?`, `Name`);
-
-    console.log(typeof name);
-    if (name) {
-        alert(`Вы не ввели имя пользователя`);
-    }  else { 
-        alert(`Hello, ${name}!`);
+10. let name = () => {
+        prompt(`What is your name?`, `Name`);
+        console.log(typeof name);
+        if (name) {
+            alert(`Вы не ввели имя пользователя`);
+        }  else { 
+            alert(`Hello, ${name}!`);
+        }
     }
 
 
