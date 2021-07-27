@@ -9,7 +9,7 @@ function result() {
     let selAct = document.getElementById('act');
     let act = selAct.options[selAct.selectedIndex].text;
     if (isNaN(num1) || isNaN(num2)) {
-        alert(`Введите кореектное число!`);
+        alert(`Введите корректное число!`);
     } else {
         switch (act) {
             case '+':
@@ -34,7 +34,6 @@ function result() {
                 break;
         } 
     }
-
 }
 
 
