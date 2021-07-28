@@ -6,11 +6,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/styles/normalize.css">
     <link rel="stylesheet" href="./assets/styles/style.css">
-    <title>EX3</title>
+    <title>EX2</title>
 </head>
 <body>
     <main class="main">
+        <div class="field">
+            <label for="bg">Выберите фон сайта</label><br />
+            <select class="input" id="bg" onchange="bgChange()">
+                <option value="blue">Голубой</option>
+                <option value="yellow">Жёлтый</option>
+                <option value="green">Зелёный</option>
+                <option value="purple">Фиолетовый</option>
+            </select>
+        </div>
+        <form class="form">
+            <h2 class="form_heading">Create your account</h2>
+            <div class="form_center">
+                <div class="form_field">
+                <label for="name" class="form_label">Your name</label>
+                <div class="form_input" name="name">
+                    <div class="form_imgBox">
+                        <img class="form_img" src="./assets/images/user.svg" alt="user">
+                    </div>
+                    <input  id="name" class="form_inputText" type="text" placeholder="Enter your Name">
+                </div>
+                </div>
+                <div class="form_field">
+                    <label for="email" class="form_label">Your Email</label>
+                    <div class="form_input" name="email">
+                        <div class="form_imgBox">
+                            <img class="form_img" src="./assets/images/email.svg" alt="email">
+                        </div>
+                        <input id="email" class="form_inputText" type="text" placeholder="Enter your Email">
+                    </div>
+                </div>
+                <div class="form_field">
+                    <label for="username" class="form_label">Username</label>
+                    <div class="form_input" name="username">
+                        <div class="form_imgBox">
+                            <img class="form_img" src="./assets/images/users.svg" alt="users">
+                        </div>
+                        <input id="username" class="form_inputText" type="text" placeholder="Enter your Userame">
+                    </div>
+                </div>
+                <div class="form_field">
+                    <label for="password" class="form_label">Password</label>
+                    <div class="form_input" name="password">
+                        <div class="form_imgBox">
+                            <img class="form_img" src="./assets/images/padlock.svg" alt="padlock">
+                        </div>
+                        <input id="password" class="form_inputText" type="password" placeholder="Enter your Password">
+                    </div>
+                </div>
+                <div class="form_field">
+                    <label for="confirmPassword" class="form_label">Confirm password</label>
+                    <div class="form_input"name="confirmPassword">
+                        <div class="form_imgBox">
+                            <img class="form_img" src="./assets/images/padlock.svg" alt="padlock">
+                        </div>
+                        <input id="confirmPassword"  class="form_inputText" type="password" placeholder="Confirm your Password">
+                    </div>
+                </div>
+                
+                <input onclick="verification()" type="submit" id="register" class="form_btn" value="Register">
+                <div class="form_check"> 
+                    <input class="checkbox"  id="checkbox" type="checkbox" checked>
+                    <label for="checkbox" class="form_labelCheck">
+                        <span id="check"></span>By clicking the button you express your consent to us processing you personal data.
+                    </label>
+                </div>
+            </div>
         
+        </form>
     </main>
     <script src="./assets/scripts/index.js"></script>
 </body>
