@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles/normalize.css">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <title>Calc</title>
+</head>
+<body>
+    <main class="main">
+        <form class="form">
+            <h2 class="form_heading">CAR COST</h2>
+            <div class="form_center">
+                <div class="form_field">
+                <label for="name" class="form_label">Car brand</label>
+                <div class="form_msg" id="msg_brand">You have not selected the brand</div>
+                <div class="form_input" name="name">
+                    <div class="form_imgBox">
+                        <img class="form_img" src="./assets/images/car.svg" alt="user">
+                    </div>
+                    <select name="brand" id="brand" class="form_choice" onchange="choiceBrand()">
+                        <option value="0">Select the car brand</option>
+                        <option value="1">Mazda</option>
+                        <option value="2">Peogeout</option>
+                        <option value="3">Hyundai</option>
+                        <option value="4">Kia</option>
+                        <option value="5">Toyota</option>
+                    </select>
+                </div>
+                </div>
+                <div class="form_field">
+                    <label for="model" class="form_label">Car model</label>
+                    <div class="form_msg" id="msg_model">You have not selected the model of car</div>
+                    <div class="form_input" name="model">
+                        <div class="form_imgBox">
+                            <img class="form_img" src="./assets/images/car-repair.svg" alt="email">
+                        </div>
+                        <select name="model" id="model-none" class="form_choice" onchange="choiceModel()">
+                            <option value="">Select the model of car
+                            </option>
+                        </select>
+                        <select name="model" id="model-mazda" class="form_choice" onchange="choiceModel()">
+                            <option value="0">Select the model of car</option>
+                            <option value="600">3</option>
+                            <option value="1800">CX-5</option>
+                            <option value="1184">CX-7</option>
+                            <option value="1765">6</option>
+                            <option value="50">323</option>
+                        </select>
+                        <select name="model" id="model-peugeot" class="form_choice" onchange="choiceModel()">
+                            <option value="0">Select the model of car</option>
+                            <option value="277">107</option>
+                            <option value="1709">3008</option>
+                            <option value="1200">308</option>
+                            <option value="319">207</option>
+                            <option value="25">206</option>
+                        </select>
+                        <select name="model" id="model-hyundai" class="form_choice" onchange="choiceModel()">
+                            <option value="0">Select the model of car</option>
+                            <option value="2069">Santa Fe</option>
+                            <option value="1268">ix35</option>
+                            <option value="859">i30</option>
+                            <option value="1254">i40</option>
+                            <option value="150">Matrix</option>
+                        </select>
+                        <select name="model" id="model-kia" class="form_choice" onchange="choiceModel()">
+                            <option value="0">Select the model of car</option>
+                            <option value="1135">Ceed</option>
+                            <option value="1845">Optima</option>
+                            <option value="1030">Soul</option>
+                            <option value="1415">Sportage</option>
+                            <option value="1150">Spectra</option>
+                        </select>
+                        <select name="model" id="model-toyota" class="form_choice" onchange="choiceModel()">
+                            <option value="0">Select the model of car</option>
+                            <option value="1496">Camry</option>
+                            <option value="180">Mark II</option>
+                            <option value="1617">RAV 4</option>
+                            <option value="2876">Land Cruiser</option>
+                            <option value="80">Caldina</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form_field">
+                    <label for="year" class="form_label">Year of release</label>
+                    <div class="form_msg" id="msg_year">You have not selected the year of release</div>
+                    <div class="form_input" name="year">
+                        <div class="form_imgBox">
+                            <img class="form_img" src="./assets/images/calendar.svg" alt="users">
+                        </div>
+                        <select name="year" id="year" class="form_choice" onchange="choiceYear()">
+                            <option value="0">Select the year of release</option>
+                            <option value="220">2019</option>
+                            <option value="200">2018</option>
+                            <option value="180">2017</option>
+                            <option value="160">2016</option>
+                            <option value="140">2015</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form_field">
+                    <label for="kpp" class="form_label">Transmission type</label>
+                    <div class="form_msg" id="msg_kpp">You have not selected the transmission type</div>
+                    <div class="form_input" name="kpp">
+                        <div class="form_imgBox">
+                            <img class="form_img" src="./assets/images/gear-shift.svg" alt="padlock">
+                        </div>
+                        <select name="kpp" id="kpp" class="form_choice" onchange="choiceKPP()">
+                            <option value="0">Select the transmission type</option>
+                            <option value="80">Manual transmission</option>
+                            <option value="100">Automatic transmission</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form_field">
+                    <label for="engine" class="form_label">Engine type</label>
+                    <div class="form_msg" id="msg_engine">You have not selected the engine type</div>
+                    <div class="form_input" name="engine">
+                        <div class="form_imgBox">
+                            <img class="form_img" src="./assets/images/charging-station.svg" alt="padlock">
+                        </div>
+                        <select name="engine" id="engine" class="form_choice" onchange="choiceEngine()">
+                            <option value="0">Select the engine type</option>
+                            <option value="50">Petrol engine</option>
+                            <option value="80">Diesel engine</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form_field">
+                    <label for="wheel" class="form_label">Motor vehicle drive</label>
+                    <div class="form_msg" id="msg_wheel">You have not selected the motor vehicle drive</div>
+                    <div class="form_input" name="wheel">
+                        <div class="form_imgBox">
+                            <img class="form_img" src="./assets/images/fire-wheel.svg" alt="users">
+                        </div>
+                        <select name="wheel" id="wheel" class="form_choice" onchange="choiceWheel()">
+                            <option value="0">Select the motor vehicle drive</option>
+                            <option value="100">Front-wheel</option>
+                            <option value="200">Four-wheel</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form_field">
+                    <label for="power" class="form_label">Engine power (hp)</label>
+                    <div class="form_msg" id="msg_power_0">Input power: <p class="form_msg" id="msg_power_1"></p> </div>
+                    <div class="form_msg" id="msg_power_2">You have not entered the engine power</div>
+                    <div class="form_msg" id="msg_power_3">Incorrect input (engine power from 100 to 350)</div>
+                    <div class="form_input" name="power">
+                        <div class="form_imgBox">
+                            <img class="form_img" src="./assets/images/engine.svg" alt="users">
+                        </div>
+                        <input id="power" class="form_choice form_power" type="text" placeholder="Enter the engine power">
+                        <button type='button' class="form_power_btn" onclick="powerValid()"> Enter </button>
+                    </div>
+                </div>
+                <div class="form_field">
+                    <label for="Mileage" class="form_label">Mileage (km*1000)</label>
+                    <div class="form_input" name="username">
+                        <div class="form_imgBox">
+                            <img class="form_img" src="./assets/images/speedometer.svg" alt="users">
+                        </div>
+                        <input id="mileage" class="form_input_range" type="range" min="10" max="100" onchange="choiceMileage()">
+                    </div>
+                    <div id="textMileage">Selected vehicle mileage: <p id="selMileage"></p></div>
+                </div>
+
+                <input onclick="calc()" type="button" id="register" class="form_btn" value="CALCULATE">
+            </div>
+        
+        </form>
+    </main>
+    <script src="./assets/scripts/index.js"></script>
+</body>
+</html>
