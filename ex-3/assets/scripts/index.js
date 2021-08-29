@@ -14,40 +14,45 @@ function formatDate(date) {
             break;
         case (((nowDate - date) / 60 / 1000) <= 59):
             console.log(`${(nowDate - date) / 60 / 1000} минут назад!`);
-            break;
-        case (((nowDate - date) / 60 / 1000) >= 60):
+            break
+        case (((nowDate - date) / 1000) >= 86400):
             console.log(textDate(date));
             break
     }
 }
 
+function textDate(date) {
+    let day = date.getDate();
+    if (day <= 9) {
+        day = '0' + day;
+    } 
+
+    let month = date.getMonth();
+    if (month <= 9) {
+        month = '0' + month;
+    } 
+
+    let year = date.getFullYear();
+    if (year > 0) {
+        year = String(year).slice(2);
+    }
+
+    let hour = String(+date.getHours());
+    if (+hour <= 9) {
+        hour = '0' + hour;
+    }
+
+    let minutes = String(+date.getMinutes());
+    if (+minutes <= 9) {
+        minutes = '0' + minutes;
+    }
+
+    return `Дата: ${day}.${month}.${year}, ${hour}:${minutes}.`
+}
+
+
+
 formatDate(new Date(new Date - 1));
 formatDate(new Date(new Date - 30 * 1000));
 formatDate(new Date(new Date - 5 * 60 * 1000)); 
 formatDate(new Date(new Date - 86400 * 1000)); 
-
-function textDate(date) {
-    let day = date.getDate();
-    let month = date.getMonth();
-    let year = date.getFullYear();
-    let minutes = String(+date.getMinutes());
-    let hour = String(+date.getHours());
-
-    switch (true) {
-        case day <= 9:
-            day = '0' + day;
-        case month <= 9:
-            month = '0' + month;
-        case year > 0:
-            year = String(year).slice(2);
-        case +minutes <= 9:
-            minutes = '0' + minutes;
-        case +hour <= 9:
-            hour = '0' + hour;
-            break
-    }
-
-    return `Дата: ${day}.${month}.${year}, ${minutes}:${hour}.`
-}
-
-
