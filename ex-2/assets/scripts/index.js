@@ -15,7 +15,7 @@ function checkSpam() {
     themeComment.classList.add('form_theme');
     textComment.classList.add('form_text');
 
-    name = name.match(/[А-Яа-я]{2,25}/gm)[0];
+    name = name.match(/[А-Яа-я]{2,25}/gm);
 
     let values = [name, theme, text];
     for (let value of values) {
