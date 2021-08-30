@@ -14,9 +14,11 @@ function choiceBrand() {
     let brand = document.getElementById('brand').value;
     let msg = document.getElementById('msg_brand');
 
-    switch (true) {
-        case brand == 0:
-            msg.style.display = "block";
+    console.log(brand)
+
+    switch (+brand) {
+        case 0:
+            msg.style.display = `block`;
             modelNone.style.display = "block";
             modelMazda.style.display = "none";
             modelPeugeot.style.display = "none";
@@ -25,7 +27,7 @@ function choiceBrand() {
             modelToyota.style.display = "none";
             priceParameters.length = 0;
             break;
-        case brand == 1: 
+        case 1: 
             msg.style.display = "none";
             modelNone.style.display = "none";
             modelMazda.style.display = "block";
@@ -35,7 +37,7 @@ function choiceBrand() {
             modelToyota.style.display = "none";
             priceParameters[0] = +brand;
             break;
-        case brand == 2: 
+        case 2: 
             msg.style.display = "none";
             modelNone.style.display = "none";
             modelMazda.style.display = "none";
@@ -45,7 +47,7 @@ function choiceBrand() {
             modelToyota.style.display = "none";
             priceParameters[0] = +brand;
             break;
-        case brand == 3: 
+        case 3: 
             msg.style.display = "none";
             modelNone.style.display = "none";
             modelMazda.style.display = "none";
@@ -55,7 +57,7 @@ function choiceBrand() {
             modelToyota.style.display = "none";
             priceParameters[0] = +brand;
             break;
-        case brand == 4: 
+        case 4: 
             msg.style.display = "none";
             modelNone.style.display = "none";
             modelMazda.style.display = "none";
@@ -65,7 +67,7 @@ function choiceBrand() {
             modelToyota.style.display = "none";
             priceParameters[0] = +brand;
             break;
-        case brand == 5:
+        case 5:
             msg.style.display = "none";
             modelNone.style.display = "none";
             modelMazda.style.display = "none";
@@ -83,35 +85,28 @@ function choiceBrand() {
 function choiceModel() {
     let msg = document.getElementById('msg_model');
 
-    switch (true) {
-        case modelMazda.value == 0 && modelPeugeot.value == 0 &&modelHyundai.value == 0 && modelKia.value == 0 && modelToyota.value == 0:
-            msg.style.display = "block";
-            priceParameters.length = 1;
-            break;
-        case modelMazda.style.display == "block":
-            msg.style.display = "none";
-            priceParameters[1] = +modelMazda.value;
-            break;
-        case modelPeugeot.style.display == "block":
-            msg.style.display = "none";
-            priceParameters[1] = +modelPeugeot.value;
-            break;
-        case modelHyundai.style.display == "block":
-            msg.style.display = "none";
-            priceParameters[1] = +modelHyundai.value;
-            break;
-        case modelKia.style.display == "block":
-            msg.style.display = "none";
-            priceParameters[1] = +modelKia.value;
-            break;
-        case modelToyota.style.display == "block":
-            msg.style.display = "none";
-            priceParameters[1] = +modelToyota.value;
-            break;
+    if (modelMazda.value == 0 && modelPeugeot.value == 0 &&modelHyundai.value == 0 && modelKia.value == 0 && modelToyota.value == 0) {
+        msg.style.display = "block";
+        priceParameters.length = 1;
+    } else if (modelMazda.style.display == "block") {
+        msg.style.display = "none";
+        priceParameters[1] = +modelMazda.value;
+    } else if (modelPeugeot.style.display == "block") {
+        msg.style.display = "none";
+        priceParameters[1] = +modelPeugeot.value;
+    } else if (modelHyundai.style.display == "block"){
+        msg.style.display = "none";
+        priceParameters[1] = +modelHyundai.value;
+    } else if (modelKia.style.display == "block") {
+        msg.style.display = "none";
+        priceParameters[1] = +modelKia.value;
+    } else if (modelToyota.style.display == "block") {
+        msg.style.display = "none";
+        priceParameters[1] = +modelToyota.value;
     }
-
     console.log(priceParameters);
 }
+
 
 function choiceYear() {
     let year = document.getElementById('year').value;

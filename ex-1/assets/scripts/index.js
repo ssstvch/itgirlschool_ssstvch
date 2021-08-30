@@ -14,6 +14,9 @@ function sumInput() {
     // создание массива
     let numbers = [];
 
+    // создаём переменную для суммы всех значений массива
+    let sum = 0;
+
     // создание цикла для введения пользователем значений
     for(;;) {
         let value = prompt("Введите значение:", "");
@@ -24,20 +27,15 @@ function sumInput() {
             break;
         } else {
             numbers.push(+value);
+            sum += +value;
         }
     }
 
+    let sort = numbers.sort((a, b) => { return a - b })
+
     // массив выводится на страницу
-    divNumbers.innerHTML = `Введённый массив данных: ${numbers}`;
+    divNumbers.innerHTML = `Введённый массив данных: ${sort}`;
     console.log(numbers);
-
-    // создаём переменную для суммы всех значений массива
-    let sum = 0;
-
-    // перебираем и складываем все значения массива
-    for(let num of numbers) {
-        console.log(sum += num);
-    }
 
     // сумма всех значений массива выводится на страницу
     divSum.innerHTML = `Сумма всех элементов массива равна ${sum}.`;
