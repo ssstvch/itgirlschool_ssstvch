@@ -1,0 +1,113 @@
+
+$white: #fff;
+$blue: #5069b4;
+
+
+
+@keyframes myAnim {
+    0% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(0.98);
+    }
+    40% {
+        transform: scale(0.95);
+    }
+    50% {
+        transform: scale(0.92);
+    }
+    60% {
+        transform: scale(0.95);
+    }
+    70% {
+        transform: scale(0.98);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 14pt;
+}
+
+.div {
+    margin: 50px auto;
+    width: max-content;
+    &_btn {
+
+        width: max-content;
+        padding: 80px;
+
+        box-shadow: none;
+        border-radius: 100%;
+        color: $blue;
+        border: none;
+        background-color: $white;
+        box-sizing: border-box;
+
+        position: relative;
+        vertical-align: middle;
+
+
+        &::before,
+        &::after {
+            top: 0;
+            left: 0;
+            box-sizing: inherit;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+        }
+        
+        &::before {
+            border: 1px solid transparent; 
+        }
+
+        &:hover::before {
+            border-top-color: $blue; 
+            border-right-color: $blue;
+            border-bottom-color: $blue;
+            transition:
+                border-top-color 0.20s linear, 
+                border-right-color 0.30s linear 0.15s,
+                border-bottom-color 0.40s linear 0.30s;
+        }
+
+        &::after {
+            border: 0 solid transparent; 
+        }
+
+        &:hover::after {
+            border-top: 2px solid $blue; 
+            transform: rotate(270deg); 
+            transition:
+                transform 0.4s linear 0s,
+                border-left-width 0s linear 0.35s; 
+        }
+
+        &_img {
+            width: 120px;
+            &_svg {
+                width: 100%;
+            }
+        }
+    }
+    
+}
+
+.numbers {
+    width: max-content;
+    margin: 0 auto;
+    border-radius: 6px;
+}
+
+.btn_click {
+    animation: myAnim 0.3s cubic-bezier(0.85, 0, 0.15, 1); 
+}

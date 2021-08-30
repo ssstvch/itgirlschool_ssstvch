@@ -13,7 +13,7 @@ function formatDate(date) {
             console.log(`${(nowDate - date) / 1000} секунд назад!`);
             break;
         case (((nowDate - date) / 60 / 1000) <= 59):
-            console.log(`${(nowDate - date) / 60 / 1000} минут назад!`);
+            console.log(`${Math.round((nowDate - date) / 60 / 1000)} минут назад!`);
             break
         case (((nowDate - date) / 1000) >= 86400):
             console.log(textDate(date));
