@@ -14,66 +14,40 @@ function choiceBrand() {
     let brand = document.getElementById('brand').value;
     let msg = document.getElementById('msg_brand');
 
+    msg.style.display = `none`;
+    
+    modelNone.style.display = "none";
+    modelMazda.style.display = "none";
+    modelPeugeot.style.display = "none";
+    modelHyundai.style.display = "none";
+    modelKia.style.display = "none";
+    modelToyota.style.display = "none";
+
     console.log(brand)
 
     switch (+brand) {
         case 0:
             msg.style.display = `block`;
             modelNone.style.display = "block";
-            modelMazda.style.display = "none";
-            modelPeugeot.style.display = "none";
-            modelHyundai.style.display = "none";
-            modelKia.style.display = "none";
-            modelToyota.style.display = "none";
             priceParameters.length = 0;
             break;
         case 1: 
-            msg.style.display = "none";
-            modelNone.style.display = "none";
             modelMazda.style.display = "block";
-            modelPeugeot.style.display = "none";
-            modelHyundai.style.display = "none";
-            modelKia.style.display = "none";
-            modelToyota.style.display = "none";
             priceParameters[0] = +brand;
             break;
         case 2: 
-            msg.style.display = "none";
-            modelNone.style.display = "none";
-            modelMazda.style.display = "none";
             modelPeugeot.style.display = "block";
-            modelHyundai.style.display = "none";
-            modelKia.style.display = "none";
-            modelToyota.style.display = "none";
             priceParameters[0] = +brand;
             break;
         case 3: 
-            msg.style.display = "none";
-            modelNone.style.display = "none";
-            modelMazda.style.display = "none";
-            modelPeugeot.style.display = "none";
             modelHyundai.style.display = "block";
-            modelKia.style.display = "none";
-            modelToyota.style.display = "none";
             priceParameters[0] = +brand;
             break;
         case 4: 
-            msg.style.display = "none";
-            modelNone.style.display = "none";
-            modelMazda.style.display = "none";
-            modelPeugeot.style.display = "none";
-            modelHyundai.style.display = "none";
             modelKia.style.display = "block";
-            modelToyota.style.display = "none";
             priceParameters[0] = +brand;
             break;
         case 5:
-            msg.style.display = "none";
-            modelNone.style.display = "none";
-            modelMazda.style.display = "none";
-            modelPeugeot.style.display = "none";
-            modelHyundai.style.display = "none";
-            modelKia.style.display = "none";
             modelToyota.style.display = "block";
             priceParameters[0] = +brand;
             break;
