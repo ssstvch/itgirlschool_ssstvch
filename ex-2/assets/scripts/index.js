@@ -17,8 +17,9 @@ function checkSpam() {
 
     name = name.match(/[А-Яа-я]{2,25}/gm);
 
-    let values = [name, theme, text];
+    let values = [name[0], theme, text];
     for (let value of values) {
+        console.log(value)
         let check = value.replace(/(xxx)|(ххх)|(viagra)/gmi, "***");
 
         if(values[0] == value) {

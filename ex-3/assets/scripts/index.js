@@ -5,19 +5,14 @@ let nowDate = new Date;
 function formatDate(date) {
     let nowDate = new Date;
 
-    switch(true) {
-        case (nowDate - date) <= 1:
-            console.log(`Прямо сейчас!`);
-            break;
-        case ((nowDate - date) / 1000) <= 59:
-            console.log(`${(nowDate - date) / 1000} секунд назад!`);
-            break;
-        case (((nowDate - date) / 60 / 1000) <= 59):
-            console.log(`${Math.round((nowDate - date) / 60 / 1000)} минут назад!`);
-            break
-        case (((nowDate - date) / 1000) >= 86400):
-            console.log(textDate(date));
-            break
+    if ((nowDate - date) <= 1) {
+        console.log(`Прямо сейчас!`);
+    } else if ((nowDate - date) / 1000 <= 59) {
+        console.log(`${(nowDate - date) / 1000} секунд назад!`);
+    } else if ((nowDate - date) / 60 / 1000 <= 59) {
+        console.log(`${Math.round((nowDate - date) / 60 / 1000)} минут назад!`);
+    } else {
+        console.log(textDate(date));
     }
 }
 
