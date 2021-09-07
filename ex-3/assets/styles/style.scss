@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Staatliches&display=swap');
+
+$center: 0 auto;
+$fontText: 'Raleway', sans-serif;
+$fontHeading: 'Staatliches', sans-serif;
+
+body {
+    margin: $center;
+    padding: 0;
+    font-family: $fontText;
+}
+
+main {
+    margin: $center;
+}
+
+.form {
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 8px;
+    margin: 2em auto;
+    padding: 50px;
+    width: max-content;
+    background-color: rgba(189, 154, 180, 0.295);
+    &_heading{
+        font-family: $fontHeading;
+        font-size: 2.5em;
+        text-align: center;
+    }
+    &_input {
+        width: 300px;
+        margin: 10px auto;
+        padding: 5px;
+        margin-top: 0.3em;
+        display: flex;
+        border: 1px solid rgba(197, 197, 197, 0.178);
+        border-radius: 4px;
+    }
+    &_btn {
+        border: none;
+        border-radius: 6px;
+        margin-top: 10px;
+        padding: 0.5em 4em;
+        font-family: $fontHeading;
+        font-size: 2em;
+    }
+    &_text {
+        height: 120px;
+    }
+}
+
+#img {
+    width: 300px;
+    margin: 1em auto;
+    padding: 18px 5px;
+    background-color: #fff;
+    border: 1px solid rgba(197, 197, 197, 0.178);
+    border-radius: 4px;
+    &_com {
+        width: 110px;
+        float: left;
+    }
+}
