@@ -26,7 +26,7 @@ main {
   text-align: center;
 }
 
-.form_input {
+.form_div_input {
   width: 300px;
   margin: 10px auto;
   padding: 5px;
@@ -38,20 +38,11 @@ main {
   border-radius: 4px;
 }
 
-.form_btn {
-  border: none;
-  border-radius: 6px;
-  margin-top: 10px;
-  padding: 0.5em 4em;
-  font-family: "Staatliches", sans-serif;
-  font-size: 2em;
-}
-
-.form_text {
+.form_div_input_text {
   height: 120px;
 }
 
-#img {
+.form_div_input_img {
   width: 300px;
   margin: 1em auto;
   padding: 18px 5px;
@@ -60,8 +51,99 @@ main {
   border-radius: 4px;
 }
 
-#img_com {
-  width: 110px;
-  float: left;
+.form_div_btn {
+  border: none;
+  border-radius: 6px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 10px auto;
+  margin-left: 9px;
+  padding: 0.5em 4em;
+  font-family: "Staatliches", sans-serif;
+  font-size: 2em;
+}
+
+.form_comment {
+  border: 1px solid rgba(197, 197, 197, 0.178);
+  border-radius: 4px;
+  margin: 2em auto;
+  padding: 20px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: rgba(189, 154, 180, 0.295);
+}
+
+.form_comment_userBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px 12px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  border: 1px solid rgba(197, 197, 197, 0.5);
+  border-radius: 70px;
+}
+
+.form_comment_userBox_imgDiv {
+  width: 50px;
+}
+
+.form_comment_userBox_imgDiv_img {
+  width: 100%;
+  border-radius: 15px 3px 3px 15px;
+}
+
+.form_comment_userBox_name {
+  margin-left: 10px;
+}
+
+.form_comment_userBox_divBtn {
+  margin: 16px -3px;
+}
+
+.form_comment_userBox_divBtn_inputBox {
+  display: none;
+}
+
+.form_comment_userBox_divBtn_btn {
+  margin: 10px auto;
+  margin-left: 9px;
+  border-radius: 4px;
+  background-color: rgba(197, 197, 197, 0.178);
+  padding: 8px 30px;
+  font-family: "Staatliches", sans-serif;
+  cursor: pointer;
+}
+
+.form_comment_userBox_divBtn_btn:hover {
+  background-color: rgba(60, 110, 77, 0.164);
+}
+
+.form_comment_commentBox {
+  margin: 0 auto;
+  padding: 0 30px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.form_comment_commentBox_theme {
+  margin: 10px auto;
+}
+
+.form_comment_commentBox_text {
+  width: 500px;
+  margin: 10px auto;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  display: table;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,8 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Staatliches&display=swap');
 
 $center: 0 auto;
+$formMargin: 10px auto;
+$btnMarginLeft: 9px;
 $fontText: 'Raleway', sans-serif;
 $fontHeading: 'Staatliches', sans-serif;
+$borderColor: rgba(197, 197, 197, 0.178);
+$borderColorChecked: rgba(77, 77, 77, 0.1);
+$borderColorHover: rgba(60, 110, 77, 0.164);
+$borderRadiusInput: 4px;
+$borderRadiusSubmit: 6px;
 
 body {
     margin: $center;
@@ -26,37 +33,101 @@ main {
         font-size: 2.5em;
         text-align: center;
     }
-    &_input {
-        width: 300px;
-        margin: 10px auto;
-        padding: 5px;
-        margin-top: 0.3em;
-        display: flex;
-        border: 1px solid rgba(197, 197, 197, 0.178);
-        border-radius: 4px;
+    &_div{
+        &_input {
+            width: 300px;
+            margin: $formMargin;
+            padding: 5px;
+            margin-top: 0.3em;
+            display: flex;
+            border: 1px solid $borderColor;
+            border-radius: $borderRadiusInput;
+            &_text {
+                height: 120px;
+            }
+            &_img {
+                width: 300px;
+                margin: 1em auto;
+                padding: 18px 5px;
+                background-color: #fff;
+                border: 1px solid $borderColor;
+                border-radius: $borderRadiusInput;
+            }
+        }
+        &_btn {
+            border: none;
+            border-radius: $borderRadiusSubmit;
+            width: max-content;
+            margin: $formMargin;
+            margin-left: $btnMarginLeft;
+            padding: 0.5em 4em;
+            font-family: $fontHeading;
+            font-size: 2em;
+        }
     }
-    &_btn {
-        border: none;
-        border-radius: 6px;
-        margin-top: 10px;
-        padding: 0.5em 4em;
-        font-family: $fontHeading;
-        font-size: 2em;
-    }
-    &_text {
-        height: 120px;
+    &_comment {
+        border: 1px solid $borderColor;
+        border-radius: $borderRadiusInput;
+        margin: 2em auto;
+        padding: 20px;
+        width: max-content;
+        background-color: rgba(189, 154, 180, 0.295);
+        &_userBox {
+            display: flex;
+            align-items: center;
+            padding: 8px 12px;
+            width: max-content;
+            margin: $center;
+            border: 1px solid rgba(197, 197, 197, 0.5);
+            border-radius: 70px;
+            &_imgDiv {
+                width: 50px;
+                &_img {
+                    width: 100%;
+                    border-radius: 15px 3px 3px 15px;
+                }
+            }
+            &_name {
+                margin-left: 10px;
+            }
+            &_divBtn {
+                margin: 16px -3px;
+                &_inputBox{
+
+                    display: none;
+                    
+                }
+                &_btn {
+                    margin: $formMargin;
+                    margin-left: $btnMarginLeft;
+                    border-radius: $borderRadiusInput;
+                    background-color: $borderColor;
+                    padding: 8px 30px;
+                    font-family: $fontHeading;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: $borderColorHover;
+                    }
+                }
+            }
+            
+        }
+        &_commentBox {
+            margin: $center;
+            padding: 0 30px;
+            width: max-content;
+            &_theme {
+                margin: $formMargin;
+            }
+            &_text {
+                width: 500px;
+                margin: $formMargin;
+                hyphens: auto;
+                display: table;
+            }
+        }
     }
 }
 
-#img {
-    width: 300px;
-    margin: 1em auto;
-    padding: 18px 5px;
-    background-color: #fff;
-    border: 1px solid rgba(197, 197, 197, 0.178);
-    border-radius: 4px;
-    &_com {
-        width: 110px;
-        float: left;
-    }
-}
+
