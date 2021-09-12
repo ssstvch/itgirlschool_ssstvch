@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Mulish:wght@200;300;400&family=Poiret+One&display=swap');
+
+$fontHeading: 'Caveat';
+$fontHeading2: 'Poiret One';
+$fontText: 'Mulish', sans-serif;
+$center: 0 auto;
+$lightPink: #f7e7e257; 
+$blue: rgb(118, 200, 255);
+$lightBlue: rgb(176, 214, 240);
+
+
+body {
+    margin: $center;
+    padding: 0;
+    font-family: $fontText;
+    background: 
+        linear-gradient(
+            rgba(0, 0, 0, 0.2), 
+            rgba(0, 0, 0, 0.2)
+        ),
+        url(../images/background.jpg);
+    background-size: cover;
+    h1 {
+        font-family: $fontHeading;
+        font-weight: 300;
+    }
+
+    h2 {
+        font-family: $fontHeading;
+        font-weight: 300;
+    }
+
+}
+
+.scn{
+    margin: $center;
+    padding: 2vw;
+    &_heading {
+        text-align: center;
+        font-size: 3.2vw;
+    }
+    &_flex {
+        margin: $center;
+        width:90%;
+        height: 40vw;
+        background-color:  $lightPink;
+        display: flex;
+        justify-content: center;
+        border-radius: 8px;
+        box-shadow:0px 0px 5px 0px rgba(0,0,0,0.1);
+        &_form {
+            width: 40%;
+            padding: 1vw;
+            &_heading {
+                font-size: 3.5vw;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            &_inputNote {
+                padding: 15px;
+                width: 30vw;
+                height: 10vw;
+                margin: auto;
+                display: block;
+                resize: none;
+                background-color:  #ffffff56;
+                border: none;
+                border-radius: 4px;
+                box-shadow:0px 0px 5px 0px rgba(0,0,0,0.2); 
+                &:focus {
+                    outline: none;
+                    box-shadow:0px 0px 6px 1px rgba(0,0,0,0.2); 
+                    background-color:  #ffffff69;
+                }
+            }
+            &_btn {
+                font-family: $fontText;
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 1.2vw;
+                padding: 15px 35px;
+                border: none;
+                border-radius: 4px;
+                background-color: $lightBlue;
+                float: right;
+                margin-right: 1.3vw;
+                &:hover {
+                    background-color: $blue;
+                    box-shadow:0px 0px 6px 1px rgba(0,0,0,0.1); 
+                }
+            }
+        }
+        &_notes {
+            width: 50%;
+            padding: 1vw;
+            &_heading {
+                font-size: 3.5vw;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            &_textDiv {
+                height: 65%;
+                overflow: auto;
+                font-size: 1.2vw;
+                padding: 1vw 1.5vw;
+                border-radius: 4px;
+                box-shadow:0px 0px 5px 0px rgba(0,0,0,0.2); 
+                &_myNotebook {
+                    &_addNote {
+                        display: flex;
+                        flex-wrap: wrap;
+                        border-radius: 4px;
+                        padding: 1vw;
+                        margin-bottom: 0.5vw;
+                        box-shadow:0px 0px 3px 0px rgba(0,0,0,0.2); 
+                        &_noteDate {
+                            flex-basis: 80%;
+                            font-size: 0.8vw;
+                        }
+                        &_delete {
+                            flex-basis: 20%;
+                            font-size: 0.8vw;
+                            cursor: pointer;
+                        }
+                        &_addText {
+                            flex-basis: 100%;
+                            padding-left: 0.5vw;
+                            margin-left: 1vw;
+                            border-left: 1px solid rgba(128, 128, 128, 0.24);
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .scn {
+        &_flex {
+            flex-direction: column;
+            align-items: center;
+            align-content: space-between;
+            height: 58vw;
+            &_form {
+                order: 1;
+                height: 5vw;
+                margin-bottom: 20vw;
+                width: 90%;
+                display: flex;
+                flex-wrap: wrap;
+                &_heading {
+                    flex-basis: 100%;
+                    margin: 0;
+                    padding-bottom: 3vw;
+                }
+                &_inputNote {
+                    flex-basis: 60%;
+                    width: 50vw;
+                }
+                &_btn {
+                    flex-basis: 30%;
+                    height: 7vw;
+                    width: max-content;
+                    font-size: 1.8vw;
+                    margin-left: 1.5vw;
+                    margin-top: 3.5vw;
+                }
+            }
+            &_notes {
+                margin-bottom: 6vw;
+                order: 0;
+                width: 90%;
+                height: 24vw;
+                &_textDiv {
+                    height: 20vw;
+                }
+            }
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px; /* ширина для вертикального скролла */
+    height: 8px; /* высота для горизонтального скролла */
+    background-color: $lightPink;
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+    background-color: $lightBlue;
+    border-radius: 4px;
+    box-shadow: inset 1px 1px 10px $lightBlue;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: $blue;
+    width: 10px;
+    height: 10px;
+}

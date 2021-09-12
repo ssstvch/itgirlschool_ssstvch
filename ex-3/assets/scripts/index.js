@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 checkBtn.checked = false;
             }
         })
-        
+
     } 
 })
 
@@ -84,7 +84,6 @@ img.addEventListener('change', () => {
         error.style.color = "red";
         error.innerHTML = `Неверный формат файла`;
         img.parentElement.prepend(error);
-
     } else {
         img.parentElement.firstChild.remove();
         reader.readAsDataURL(files);
@@ -92,8 +91,9 @@ img.addEventListener('change', () => {
         userImage.src = reader.result;
         }
     }
-
 })
+
+
 
 form.addEventListener('submit', (event) => {
 

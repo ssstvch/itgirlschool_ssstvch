@@ -6,10 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/styles/normalize.css">
     <link rel="stylesheet" href="./assets/styles/style.css">
-    <title>EX4</title>
+    <script src="./assets/scripts/index.js" defer></script>
+    <title>Заметки</title>
 </head>
 <body>
-    
-    <script src="./assets/scripts/index.js"></script>
+    <main>
+        <section class="scn">
+            <h1 class="scn_heading">Заметки для себя любимой</h1>
+            <div class="scn_flex">
+                <form class="scn_flex_form">
+                    <h2 class="scn_flex_form_heading">
+                        Новая запись
+                    </h2>
+                    <textarea name="note" id="note" class="scn_flex_form_inputNote"></textarea> <br>
+                    <button class="scn_flex_form_btn">Сохранить</button>
+                </form>
+                <article class="scn_flex_notes">
+                    <h2 class="scn_flex_notes_heading">
+                        Мои заметки
+                    </h2>
+                    <div class="scn_flex_notes_textDiv"></div>
+                </article>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

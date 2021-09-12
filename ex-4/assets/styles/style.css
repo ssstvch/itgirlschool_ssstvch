@@ -1,1 +1,236 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Mulish:wght@200;300;400&family=Poiret+One&display=swap");
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Mulish", sans-serif;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../images/background.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/background.jpg);
+  background-size: cover;
+}
+
+body h1 {
+  font-family: "Caveat";
+  font-weight: 300;
+}
+
+body h2 {
+  font-family: "Caveat";
+  font-weight: 300;
+}
+
+.scn {
+  margin: 0 auto;
+  padding: 2vw;
+}
+
+.scn_heading {
+  text-align: center;
+  font-size: 3.2vw;
+}
+
+.scn_flex {
+  margin: 0 auto;
+  width: 90%;
+  height: 40vw;
+  background-color: #f7e7e257;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.scn_flex_form {
+  width: 40%;
+  padding: 1vw;
+}
+
+.scn_flex_form_heading {
+  font-size: 3.5vw;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.scn_flex_form_inputNote {
+  padding: 15px;
+  width: 30vw;
+  height: 10vw;
+  margin: auto;
+  display: block;
+  resize: none;
+  background-color: #ffffff56;
+  border: none;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.scn_flex_form_inputNote:focus {
+  outline: none;
+  -webkit-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff69;
+}
+
+.scn_flex_form_btn {
+  font-family: "Mulish", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.2vw;
+  padding: 15px 35px;
+  border: none;
+  border-radius: 4px;
+  background-color: #b0d6f0;
+  float: right;
+  margin-right: 1.3vw;
+}
+
+.scn_flex_form_btn:hover {
+  background-color: #76c8ff;
+  -webkit-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.1);
+}
+
+.scn_flex_notes {
+  width: 50%;
+  padding: 1vw;
+}
+
+.scn_flex_notes_heading {
+  font-size: 3.5vw;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.scn_flex_notes_textDiv {
+  height: 65%;
+  overflow: auto;
+  font-size: 1.2vw;
+  padding: 1vw 1.5vw;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.scn_flex_notes_textDiv_myNotebook_addNote {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-radius: 4px;
+  padding: 1vw;
+  margin-bottom: 0.5vw;
+  -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.scn_flex_notes_textDiv_myNotebook_addNote_noteDate {
+  -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
+  font-size: 0.8vw;
+}
+
+.scn_flex_notes_textDiv_myNotebook_addNote_delete {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+  font-size: 0.8vw;
+  cursor: pointer;
+}
+
+.scn_flex_notes_textDiv_myNotebook_addNote_addText {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  padding-left: 0.5vw;
+  margin-left: 1vw;
+  border-left: 1px solid rgba(128, 128, 128, 0.24);
+}
+
+@media screen and (max-width: 800px) {
+  .scn_flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+    height: 58vw;
+  }
+  .scn_flex_form {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    height: 5vw;
+    margin-bottom: 20vw;
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .scn_flex_form_heading {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin: 0;
+    padding-bottom: 3vw;
+  }
+  .scn_flex_form_inputNote {
+    -ms-flex-preferred-size: 60%;
+        flex-basis: 60%;
+    width: 50vw;
+  }
+  .scn_flex_form_btn {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+    height: 7vw;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    font-size: 1.8vw;
+    margin-left: 1.5vw;
+    margin-top: 3.5vw;
+  }
+  .scn_flex_notes {
+    margin-bottom: 6vw;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    width: 90%;
+    height: 24vw;
+  }
+  .scn_flex_notes_textDiv {
+    height: 20vw;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  /* ширина для вертикального скролла */
+  height: 8px;
+  /* высота для горизонтального скролла */
+  background-color: #f7e7e257;
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+  background-color: #b0d6f0;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 1px 1px 10px #b0d6f0;
+          box-shadow: inset 1px 1px 10px #b0d6f0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #76c8ff;
+  width: 10px;
+  height: 10px;
+}
+/*# sourceMappingURL=style.css.map */
