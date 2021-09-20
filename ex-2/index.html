@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles/normalize.css">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <title>Interview</title>
+</head>
+<body>
+    <form id="form">
+            <h2>Расскажи о своём котике</h2>
+            <div class="field">
+                <label for="nickname">Кличка Вашего питомца:</label> <br />
+                <input type="text" name="catName" class="input catName" id="nickname" placeholder="Кличка питомца" required/>
+            </div>
+            <div class="field">
+                <label for="name">Ваше имя:</label> <br />
+                <input type="text" name="name" class="input name" id="name" placeholder="Имя" required />
+            </div>
+            <div class="field">
+                <label for="email">Ваш e-mail:</label> <br />
+                <input type="email" name="email" class="input email" id="email" placeholder="E-Mail"/>
+            </div>
+            <div class="field_diet">
+                <label for="breed">Порода Вашего питомца:</label><br />
+                <select class="input" id="breed" required>
+                    <option value = "" disabled selected hidden>Порода питомца</option>
+                    <option value="scottish">Шотландская</option>
+                    <option value="british">Британская</option>
+                    <option value="maine-coon">Мейн-кун</option>
+                    <option value="bengali">Бенгальская</option>
+                    <option value="canadian">Канадский сфинкс</option>
+                    <option value="don">Донской сфинкс</option>
+                    <option value="abyssinian">Абиссинская</option>
+                    <option value="siberian">Сибирская</option>
+                    <option value="neva">Невская маскарадная</option>
+                    <option value="persian">Персидская</option>
+                </select>
+            </div>
+            <div class="field field_box">
+                <fieldset required>
+                    <legend>Рацион Вашего питомца</legend>
+                    <div id="food">
+                        <p class="diet"><input class="checkbox" name="f" type="checkbox"/> <span class="diet"> Сухой корм</span></p>
+                        <p class="diet"><input name="f" type="checkbox" class="checkbox"/> <span class="diet"> Влажный корм </span></p>
+                        <p class="diet"><input name="f" type="checkbox" class="checkbox"/> <span class="diet"> Натуральный корм </span> </p>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="field field_box">
+                <fieldset>
+                    <legend>Пол Вашего питомца <abbr title="Поле не заполнено" aria-label="required">*</abbr></legend>
+                        <input id="male" name="sex" type="radio" class="radio" required><span> Самец </span> </br>
+                        <input id="female" name="sex" type="radio" class="radio" required><span> Самка </span>
+                </fieldset>
+            </div>
+            <div class="field">
+                <label for="comment">Укажите особенности Вашего питомца:</label> <br />
+                <textarea class="input" name="features" id="comment" cols="40" rows="5" placeholder="Особенности питомца" min="30" required></textarea>
+            </div>
+            <div class="field field_box">
+                <fieldset>
+                    <legend>Вставьте фото Вашего питомца</legend>
+                    <input type="file" id="img"  required/>
+                </fieldset>
+            </div>
+            <div><input type="submit" class="button" value="Сохранить"/></div>
+    </form> 
+
+    <script src="./assets/scripts/index.js"></script>
+</body>
+</html>
