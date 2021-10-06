@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles/normalize.css">
+    <link rel="stylesheet" href="./assets/styles/slyse.css">
+    <script src="./assets/scripts/index.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>Cat breed</h1>
+        <select class="choose_breed" id="breed" required>
+            <option value="" selected="selected" hidden="hidden">Choose breed</option>
+            <option value="sfol">Scottish Fold</option>
+            <option value="bsho">British Shorthair</option>
+            <option value="mcoo">Maine Coon</option>
+            <option value="beng">Bengal</option>
+            <option value="hima">Himalayan</option>
+            <option value="sphy">Sphynx</option>
+            <option value="dons">Donskoy</option>
+            <option value="abys">Abyssinian</option>
+            <option value="siam">Siamese</option>
+            <option value="bali">Balinese</option>
+        </select>
+        <div class="cat_card">
+            <h2 class="cat_card_name"></h2>
+            <div class="cat_card_photo">
+                <img class="cat_card_photo_img" alt="cat">
+            </div>
+            <div class="cat_card_desc">
+                <h4 class="cat_card_heading">Description</h4>
+                <p id = "desc" class="cat_card_text"></p>
+            </div>
+            <div class="cat_card_temp">
+                <h4 class="cat_card_heading">Temperament</h4>
+                <p id = "temp" class="cat_card_text"></p>
+            </div>
+            <div class="cat_card_origin">
+                <h4 class="cat_card_heading">Origin</h4>
+                <p id = "origin" class="cat_card_text"></p>
+            </div>
+            <div class="cat_card_weight">
+                <h4 class="cat_card_heading">Weight</h4>
+                <p id = "weight" class="cat_card_text"></p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

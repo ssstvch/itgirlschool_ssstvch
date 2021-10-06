@@ -1,0 +1,49 @@
+body {
+  margin: 0 auto;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3vw;
+}
+
+.choose_breed {
+  text-align: center;
+  width: 20vw;
+  margin-top: 3vw;
+  margin-left: 40%;
+  font-size: 1.5vw;
+  padding: 1vw 4vw;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(221, 221, 221, 0.726);
+}
+
+.cat_card {
+  display: none;
+  border: 1px solid rgba(0, 0, 0, 0.075);
+  border-radius: 8px;
+  width: 30vw;
+  margin: 0 auto;
+  margin-top: 3vw;
+  padding: 2vw;
+}
+.cat_card_name {
+  text-align: center;
+  font-size: 2vw;
+}
+.cat_card_photo {
+  width: 26vw;
+  margin: 0 auto;
+}
+.cat_card_photo_img {
+  width: 100%;
+}
+.cat_card_heading {
+  margin: 2vw 0 1vw 0;
+}
+.cat_card_text {
+  margin: 0;
+}/*# sourceMappingURL=slyse.css.map */
