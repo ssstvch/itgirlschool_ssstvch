@@ -28,7 +28,7 @@ class Validator {
     isEmail(str) {
         if (str.match(/^[^@]+@[^@.]+\.[^@]+$/)) {
             return true
-        } else return false
+        } return false
     }
 
     isDomain(str) {
