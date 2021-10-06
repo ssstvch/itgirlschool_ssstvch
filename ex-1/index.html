@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles/normalize.css">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <script src="./assets/scripts/index.js" defer></script>
+    <title>Твой топ супергероев</title>
+</head>
+<body>
+    <main>
+        <h1 class="heading">Выбери своего супергероя</h1>
+        <button class="btn">Сделай выбор</button>
+        <section class="gallery">
+            <div class="gallery_info">
+                <h2 class="gallery_info_name"></h2>
+                <div class="gallery_info_activity gallery_info_flex">
+                    <h3 class="gallery_info_activity_heading gallery_heading">Деятельность:</h3>
+                    <div class="gallery_info_activity_text gallery_text"></div>
+                </div>
+                <div class="gallery_info_alterego gallery_info_flex">
+                    <h3 class="gallery_info_alterego_heading gallery_heading">Альтер Эго:</h3>
+                    <div class="gallery_info_alterego_text gallery_text"></div>
+                </div>
+                <div class="gallery_info_friends gallery_info_flex">
+                    <h3 class="gallery_info_friends_heading gallery_heading">Друзья:</h3>
+                    <div class="gallery_info_friends_text gallery_text"></div>
+                </div>
+            </div>
+            <div class="gallery_image">
+                <img alt="Фото супергероя" class="gallery_image_img">
+            </div>
+            <div class="gallery_moreinfo">
+                <h3 class="gallery_moreinfo_hedaing gallery_heading">Подробнее:</h3>
+                <div class="gallery_moreinfo_text gallery_text"></div>
+            </div>
+        </section>
+        <section class="rate">
+            <h2 class="rate_heading">
+                Твоя оценка:
+            </h2>
+            <div class="rate_rating">
+                    <input type="radio" name="rating-star" class="rate_rating_control rate_rating_screenReader" id="rc1">
+                    <input type="radio" name="rating-star" class="rate_rating_control rate_rating_screenReader" id="rc2">
+                    <input type="radio" name="rating-star" class="rate_rating_control rate_rating_screenReader" id="rc3">
+                    <input type="radio" name="rating-star" class="rate_rating_control rate_rating_screenReader" id="rc4">
+                    <input type="radio" name="rating-star" class="rate_rating_control rate_rating_screenReader" id="rc5">
+                    <input type="radio" name="rating-star" class="rate_rating_control rate_rating_screenReader" id="rc6">
+                    <input type="radio" name="rating-star" class="rate_rating_control rate_rating_screenReader" id="rc7">
+                    <input type="radio" name="rating-star" class="rate_rating_control rate_rating_screenReader" id="rc8">
+                    <input type="radio" name="rating-star" class="rate_rating_control rate_rating_screenReader" id="rc9">
+                    <input type="radio" name="rating-star" class="rate_rating_control rate_rating_screenReader" id="rc10">
+
+                    <label for="rc1" class="rate_rating_item">
+                        <svg class="rate_rating_star">
+                            <use xlink:href="#star"></use>
+                        </svg>
+                    </label>
+                    <span class="rate_rating_screenReader">1</span>
+
+                    <label for="rc2" class="rate_rating_item">
+                        <svg class="rate_rating_star">
+                            <use xlink:href="#star"></use>
+                        </svg>
+                    </label>
+                    <span class="rate_rating_screenReader">2</span>
+
+                    <label for="rc3" class="rate_rating_item">
+                        <svg class="rate_rating_star">
+                            <use xlink:href="#star"></use>
+                        </svg>
+                    </label>
+                    <span class="rate_rating_screenReader">3</span>
+
+                    <label for="rc4" class="rate_rating_item">
+                        <svg class="rate_rating_star">
+                            <use xlink:href="#star"></use>
+                        </svg>
+                    </label>
+                    <span class="rate_rating_screenReader">4</span>
+
+                    <label for="rc5" class="rate_rating_item">
+                        <svg class="rate_rating_star">
+                            <use xlink:href="#star"></use>
+                        </svg>
+                    </label>
+                    <span class="rate_rating_screenReader">5</span>
+
+
+                    <label for="rc6" class="rate_rating_item">
+                        <svg class="rate_rating_star">
+                            <use xlink:href="#star"></use>
+                        </svg>
+                    </label>
+                    <span class="rate_rating_screenReader">6</span>
+
+                    <label for="rc7" class="rate_rating_item">
+                        <svg class="rate_rating_star">
+                            <use xlink:href="#star"></use>
+                        </svg>
+                    </label>
+                    <span class="rate_rating_screenReader">7</span>
+
+                    <label for="rc8" class="rate_rating_item">
+                        <svg class="rate_rating_star">
+                            <use xlink:href="#star"></use>
+                        </svg>
+                    </label>
+                    <span class="rate_rating_screenReader">8</span>
+
+                    <label for="rc9" class="rate_rating_item">
+                        <svg class="rate_rating_star">
+                            <use xlink:href="#star"></use>
+                        </svg>
+                    </label>
+                    <span class="rate_rating_screenReader">9</span>
+
+                    <label for="rc10" class="rate_rating_item">
+                        <svg class="rate_rating_star">
+                            <use xlink:href="#star"></use>
+                        </svg>
+                    </label>
+                    <span class="rate_rating_screenReader">10</span>
+
+            </div>
+
+            <button class="rate_btn" type="submit">
+                Следующий
+            </button>
+
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+                <symbol id="star" viewBox="0 0 26 28">
+                <path d="M26 10.109c0 .281-.203.547-.406.75l-5.672 5.531 1.344 7.812c.016.109.016.203.016.313 0 .406-.187.781-.641.781a1.27 1.27 0 0 1-.625-.187L13 21.422l-7.016 3.687c-.203.109-.406.187-.625.187-.453 0-.656-.375-.656-.781 0-.109.016-.203.031-.313l1.344-7.812L.39 10.859c-.187-.203-.391-.469-.391-.75 0-.469.484-.656.875-.719l7.844-1.141 3.516-7.109c.141-.297.406-.641.766-.641s.625.344.766.641l3.516 7.109 7.844 1.141c.375.063.875.25.875.719z"/>
+                </symbol>
+            </svg>
+        </section>
+        <section class="yourRating">
+            <h3 class="yourRating_heading">
+                Твой топ супергероев!
+            </h3>
+            <ul class="yourRating_ul">
+                <li class="yourRating_ul_li" id="top1"></li>
+                <li class="yourRating_ul_li" id="top2"></li>
+                <li class="yourRating_ul_li" id="top3"></li>
+                <li class="yourRating_ul_li" id="top4"></li>
+                <li class="yourRating_ul_li" id="top5"></li>
+                <li class="yourRating_ul_li" id="top6"></li>
+                <li class="yourRating_ul_li" id="top7"></li>
+                <li class="yourRating_ul_li" id="top8"></li>
+                <li class="yourRating_ul_li" id="top9"></li>
+                <li class="yourRating_ul_li" id="top10"></li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

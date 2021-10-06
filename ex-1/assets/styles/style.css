@@ -1,10 +1,181 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Open+Sans:wght@300;400&display=swap");
 body {
   margin: 0 auto;
   padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.heading {
+  padding: 1vw 0;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2vw;
+}
+
+.btn {
+  width: 32vw;
+  margin: 5vw 34%;
+  padding: 3vw 2vw;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2vw;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #a1f0cf;
+  border: none;
+  border-radius: 4px;
 }
 
 .gallery {
   display: none;
+  grid-template-areas: "info photo" "moreInfo moreInfo";
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  padding: 1vw 2vw;
+  margin: 0 auto;
+  width: 70vw;
+  font-size: 1.2vw;
 }
-/*# sourceMappingURL=style.css.map */
+.gallery_heading {
+  margin: 0;
+  margin-top: 10px;
+  padding-right: 5px;
+  width: 10vw;
+}
+.gallery_text {
+  font-size: 1.2vw;
+}
+.gallery_info {
+  grid-area: info;
+  padding: 0 2vw;
+}
+.gallery_info_name {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2vw;
+}
+.gallery_info_flex {
+  display: flex;
+  align-items: baseline;
+}
+.gallery_image {
+  grid-area: photo;
+  width: 20vw;
+  margin-left: 1.3vw;
+}
+.gallery_image_img {
+  width: 100%;
+}
+.gallery_moreinfo {
+  grid-area: moreInfo;
+  padding: 0 2vw;
+}
+.gallery_moreinfo_text {
+  text-align: justify;
+  margin-top: 5px;
+}
+
+.rate {
+  display: none;
+  margin: 0 auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.rate_rating {
+  color: #eee;
+  display: flex;
+  font-size: 3vw;
+  margin: 0 auto;
+}
+.rate_rating_item {
+  cursor: pointer;
+  position: relative;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+.rate_rating_screenReader {
+  width: 1px !important;
+  height: 1pх !important;
+  padding: 0 !important;
+  border: none !important;
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  overflow: hidden !important;
+}
+.rate_rating_star {
+  display: block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  stroke: #222;
+  stroke-width: 1px;
+}
+.rate_btn {
+  width: 20vw;
+  padding: 1vw;
+  margin-top: 20px;
+  float: right;
+  border: none;
+  border-radius: 4px;
+  background-color: #c0f5f7;
+}
+
+.rate_rating_control:nth-of-type(1):focus ~ .rate_rating_item:nth-of-type(1)::before,
+.rate_rating_control:nth-of-type(2):focus ~ .rate_rating_item:nth-of-type(2)::before,
+.rate_rating_control:nth-of-type(3):focus ~ .rate_rating_item:nth-of-type(3)::before,
+.rate_rating_control:nth-of-type(4):focus ~ .rate_rating_item:nth-of-type(4)::before,
+.rate_rating_control:nth-of-type(5):focus ~ .rate_rating_item:nth-of-type(5)::before,
+.rate_rating_control:nth-of-type(6):focus ~ .rate_rating_item:nth-of-type(6)::before,
+.rate_rating_control:nth-of-type(7):focus ~ .rate_rating_item:nth-of-type(7)::before,
+.rate_rating_control:nth-of-type(8):focus ~ .rate_rating_item:nth-of-type(8)::before,
+.rate_rating_control:nth-of-type(9):focus ~ .rate_rating_item:nth-of-type(9)::before,
+.rate_rating_control:nth-of-type(10):focus ~ .rate_rating_item:nth-of-type(10)::before {
+  content: "";
+  box-shadow: 0 0 0 1px #ffcc00;
+  border-radius: 50%;
+  position: absolute;
+  top: -0.15em;
+  right: 0;
+  bottom: -0.15em;
+  left: 0;
+  z-index: -1;
+}
+
+.rate_rating:hover,
+.rate_rating_control:nth-of-type(1):checked ~ .rate_rating_item:nth-of-type(1),
+.rate_rating_control:nth-of-type(2):checked ~ .rate_rating_item:nth-of-type(-n+2),
+.rate_rating_control:nth-of-type(3):checked ~ .rate_rating_item:nth-of-type(-n+3),
+.rate_rating_control:nth-of-type(4):checked ~ .rate_rating_item:nth-of-type(-n+4),
+.rate_rating_control:nth-of-type(5):checked ~ .rate_rating_item:nth-of-type(-n+5),
+.rate_rating_control:nth-of-type(6):checked ~ .rate_rating_item:nth-of-type(-n+6),
+.rate_rating_control:nth-of-type(7):checked ~ .rate_rating_item:nth-of-type(-n+7),
+.rate_rating_control:nth-of-type(8):checked ~ .rate_rating_item:nth-of-type(-n+8),
+.rate_rating_control:nth-of-type(9):checked ~ .rate_rating_item:nth-of-type(-n+9),
+.rate_rating_control:nth-of-type(10):checked ~ .rate_rating_item:nth-of-type(-n+10) {
+  color: #ffcc00;
+}
+
+.rate_rating_item:hover ~ .rate_rating_item {
+  color: #eee;
+}
+
+.yourRating {
+  display: none;
+  margin: 0 auto;
+  background-color: #fff;
+}
+.yourRating_heading {
+  text-align: center;
+  font-size: 2em;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+}
+.yourRating_ul {
+  margin: 0 auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  list-style-type: none;
+}/*# sourceMappingURL=style.css.map */
