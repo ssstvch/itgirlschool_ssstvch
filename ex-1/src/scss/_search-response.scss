@@ -1,0 +1,27 @@
+$fontForText: 'PT Root UI';
+
+.response {
+    // display: none;
+    width: 60vw;
+    margin: 0 auto;
+    &__title {
+        text-align: center;
+        font-family: $fontForText;
+        font-size: 1.4vw;
+        font-weight: 200;
+        letter-spacing: 0.1vw;
+        margin: 3vw 1.5vw 1.5vw 1.5vw;
+    }
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+.image-container {
+    width: 15vw;
+    &__image {
+        width: 100%;
+    }
+}

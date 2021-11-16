@@ -1,0 +1,36 @@
+$fontForText: 'PT Root UI';
+
+.form {
+    font-family: $fontForText;
+    font-weight: 400;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    border-radius: 4px;
+    padding: 1.3vw 2vw;
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    margin: 0 auto;
+    &__text {
+        font-size: 1.1vw;
+    }
+    &__input {
+        border: 1px solid rgba(128, 128, 128, 0.5);
+        margin: 2vw 0 1.5vw 0;
+        &:active,
+        &:focus {
+            border-color: rgb(128, 128, 128)
+        }
+    }
+    &__btn {
+        @include btn_anim(1.015, 0.99);
+        padding: 0.7vw 0;
+        border: 1px solid rgb(128, 128, 128);
+        border-radius: 4px;
+        background-color: rgb(95, 158, 160);
+        color:rgb(224, 255, 255);
+        font-size: 1.6vw;
+        text-transform: uppercase;
+        letter-spacing: 0.3vw;
+
+    }
+}
