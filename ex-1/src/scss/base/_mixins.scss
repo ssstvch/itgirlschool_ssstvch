@@ -63,3 +63,23 @@
 	padding: 0 #{$padding};
 	margin: 0 auto;
 }
+
+@mixin for-phone-only {
+	@media (max-width: 599px) { @content; }
+}
+
+@mixin for-tablet-portrait-up {
+	@media (max-width: 899px) { @content; }
+}
+
+@mixin for-tablet-landscape-up {
+	@media (max-width: 1199px) { @content; }
+}
+
+@mixin for-desktop-up {
+	@media (max-width: 1799) { @content; }
+}
+
+@mixin for-big-desktop-up {
+	@media (min-width: 1800px) { @content; }
+}
