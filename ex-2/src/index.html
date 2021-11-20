@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+@@include('components/page-blocks/_head.html',{
+"lang":"ru",
+"title":"Название проекта"
+})
+
+<body>
+	@@include('components/page-blocks/_header.html')
+	<main class="main">
+		<form action="https://.org/post" class="form">
+			<h2 class="form__header">Create your account</h2>
+
+			@@include('components/bem-blocks/_form-input.html', {
+				"name": "name",
+				"label": "Your name",
+				"src": "img/email.svg",
+				"alt": "user",
+				"type": "text",
+				"placeholder": "Enter your name",
+				"class__input": "name"
+			})
+
+			@@include('components/bem-blocks/_form-input.html', {
+				"name": "email",
+				"label": "Your Email",
+				"src": "img/email.svg",
+				"alt": "email",
+				"type": "text",
+				"placeholder": "Enter your E-mail",
+				"class__input": "email"
+			})
+
+			@@include('components/bem-blocks/_form-input.html', {
+				"name": "username",
+				"label": "Username",
+				"src": "img/users.svg",
+				"alt": "username",
+				"type": "text",
+				"placeholder": "Enter your Username",
+				"class__input": "username"
+			})
+	
+			@@include('components/bem-blocks/_form-input.html', {
+				"name": "password",
+				"label": "Password",
+				"src": "img/padlock.svg",
+				"alt": "padlock",
+				"type": "password",
+				"placeholder": "Enter your Password",
+				"class__input": "password"
+			})
+	
+			@@include('components/bem-blocks/_form-input.html', {
+				"name": "confirmPassword",
+				"label": "Confirm password",
+				"src": "img/padlock.svg",
+				"alt": "padlock",
+				"type": "password",
+				"placeholder": "Confirm your Password",
+				"class__input": "password-confirm"
+			})
+			
+			@@include('components/bem-blocks/_button-reg.html',{
+				"id": "btn-reg",
+				"class": "form__button",
+				"value": "Register"
+			})
+	
+			@@include('components/bem-blocks/_checkbox-reg.html')
+			@@include('components/bem-blocks/_errors-reg.html')
+
+		</form>
+	</main>
+	@@include('components/page-blocks/_footer.html')
+	@@include('components/page-blocks/_scripts.html')
+
+</body>
+
+</html>

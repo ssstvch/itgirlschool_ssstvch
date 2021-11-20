@@ -1,0 +1,18 @@
+$font-for-title: "Staatliches";
+$hover-color: rgba(236, 81, 81, 0.623);
+
+.form__button {
+
+   @include btn_anim(1.01, 0.99);
+
+    border: none;
+    margin-top: 1em;
+    padding: 0.5em 5.8em;
+    font-family: $font-for-title;
+    font-size: 2em;
+
+    &:hover {
+        background-color: $hover-color;
+    }
+    
+}
