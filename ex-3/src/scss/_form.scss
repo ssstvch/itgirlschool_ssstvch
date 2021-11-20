@@ -1,0 +1,18 @@
+$font-for-text: "Segoi UI";
+$border-color: rgb(197, 197, 197);
+$center-align: 20px auto;
+
+.form-cat {
+    border: 1px solid $border-color;
+    background-color: rgba(74, 115, 192, 0.199);
+    border-radius: 8px;
+    margin: $center-align;
+    padding: 50px;
+    width: 25vw;
+    &__title {
+        text-align: center;
+        margin-bottom: 2.5vw;
+        font-weight: 100;
+        letter-spacing: 0.2vw;
+    }
+}
