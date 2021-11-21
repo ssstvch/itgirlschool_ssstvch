@@ -32,6 +32,11 @@ const add_image_src = (result, img) => {
 const add_error = () => {
     let text_error = document.createElement(`div`);
     text_error.className = `form__error`;
+    try {
+        if(request_text == `` && request_text == null && request_text == undefined) BAD_code()
+    } catch {
+        open_popup(`Ничего не найдено`, `Введите запрос`);
+    }
     if(document.querySelector(`.form__error`) === null) {
         document.querySelector(`.form__input`).after(text_error);
         document.querySelector(`.form__error`).innerHTML = `Ничего не найдено, введите корректный запрос`;
@@ -69,17 +74,41 @@ const show_search_result = (result) => {
     }
 }
 
+const open_popup = (tytle, text) => {
+
+    document.querySelector(`.body__title`).innerHTML = tytle;
+    document.querySelector(`.body__text`).innerHTML = text;
+
+    document.querySelector(`.popup__body`).classList.add(`active`);
+    document.querySelector(`.popup`).classList.add(`active`);
+
+    document.querySelector(`.body__button`).addEventListener('click', (event) => {
+        event.preventDefault();
+        close_popup()
+    })
+}
+
+const close_popup = () => {
+
+    document.querySelector(`.popup__body`).classList.remove(`active`);
+    document.querySelector(`.popup`).classList.remove(`active`);
+
+}
+
 async function get_answer_giphy() {
+
     let request_text = document.querySelector(`.form__input`).value;
-
-    const get_result = await fetch(
-        `${giphy_api.endpoint}api_key=${giphy_api.key}&q=${request_text}&limit=3&offset=0&lang=ru`
-    );
-
-    const result = await get_result.json();
-    console.log(result)
-
-    show_search_result(result);
+   
+    try {
+        let get_result = await fetch(
+            `${giphy_api.endpoint}api_key=${giphy_api.key}&q=${request_text}&limit=3&offset=0&lang=ru`
+        )
+        let result = await get_result.json();
+        show_search_result(result);
+    } catch (error) {
+        open_popup(`Нет доступа к серверу`, `Повторите попытку позже`);
+        console.log(`Нет доступа к серверу. Повторите позже. Подробнее:${error}`)
+    }    
 }
 
 
