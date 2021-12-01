@@ -62,7 +62,7 @@ export const data = {
 export default function App() {
   return (
     <div className="chart">
-      <h1 className="chart__title">npm dowloads</h1>
+      <h1 className="chart__title">npm downloads</h1>
       <div className="chart__container">
         <Pie data={data} className="chart__canva" />;
       </div>
