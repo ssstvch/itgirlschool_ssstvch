@@ -1,0 +1,64 @@
+$background-sidebar: rgb(255, 255, 255);
+$background-body: rgb(240, 247, 255);
+$focus-color:  rgb(0, 119, 255);
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3vw 19vw;
+
+    &__icon {
+        position: fixed;
+        padding: 0.6vw 0.4vw 0 0.4vw;
+        margin-left: 2vw;
+        width: 1.8vw;
+    }
+
+    &__input {
+        padding: 0.7vw 2vw 0.7vw 4vw;
+        border: none;
+        border-radius: 30px;
+        width: 25vw;
+    }
+
+
+
+    &__choose-theme {
+        margin-right: 4vw;
+    }
+
+    &__switch-btn {
+        display: inline-block;
+        border-radius: 40px; 
+        background: $background-body; 
+        z-index: 0;
+        margin: 0;
+        padding: 0.57vw 1.17vw;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        transition-duration: 300ms;
+
+        &::after {
+            content: "";
+            padding: 0.57vw;
+            border-radius: 1vw; 
+            background: #fff;
+            top: 0; 
+            left: 3px; 
+            transition-duration: 300ms; 
+            position: absolute;
+            z-index: 1;
+        }
+
+        &_on {
+            background: $focus-color;
+
+            &::after {
+                left: 1.2vw;
+            }
+        }
+    }
+
+}
