@@ -1,11 +1,70 @@
-body {
-    font-size: 1.5vw;
-    font-weight: 200;
-    color: rgb(228, 227, 227);
-    letter-spacing: 0.1vw;
+.navbar {
+    padding: 1vw 15.2vw;
+    justify-content: space-between;
 }
 
-.col {
-    background-color: blue;
-    padding: 5vw;
+.navbar-brand {
+    margin: 0;
+    font-size: 1.3vw;
+}
+
+.navbar-collapse {
+    justify-content: space-between !important;
+}
+
+.navbar-nav__menu {
+    width: 20vw;
+    margin-right: 0 !important;
+}
+
+.welcome {
+    margin: 2vw auto;
+    padding: 8vw 2vw 4vw 2vw;
+    border-radius: 4px;
+}
+
+.welcome__title {
+    font-size: 5vw;
+    font-weight: 200;
+}
+
+.welcome__text {
+    font-size: 1.2vw;
+}
+
+.welcome__button a {
+    padding: 0.8vw 2vw;
+    font-size: 1.2vw;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 14vw;
+    margin: 0 auto;
+}
+
+.card-title {
+    font-size: 1.2vw;
+    font-weight: 600;
+    padding: 1vw 0;
+}
+
+.card-text {
+    padding-bottom: 1.5vw;
+}
+
+.card-footer {
+    padding: 1vw 0;
+}
+
+.footer {
+    margin-top: 4vw;
+}
+
+.copyright {
+    color: white;
+    padding: 1.5vw 0 0.8vw 0;
+    font-size: 0.9vw;
+    margin: 0 auto;
 }
