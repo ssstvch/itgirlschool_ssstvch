@@ -1,0 +1,11 @@
+body {
+    font-size: 1.5vw;
+    font-weight: 200;
+    color: rgb(228, 227, 227);
+    letter-spacing: 0.1vw;
+}
+
+.col {
+    background-color: blue;
+    padding: 5vw;
+}
