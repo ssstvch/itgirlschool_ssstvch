@@ -251,6 +251,10 @@
 
 /* global styles */
 
+.hidden {
+    display: none;
+}
+
 img {
     width: 100%;
 }
@@ -264,3 +268,4 @@ img {
     font-family: "Intro"; 
     src: url("../fonts/Intro.woff");
 } 
+
