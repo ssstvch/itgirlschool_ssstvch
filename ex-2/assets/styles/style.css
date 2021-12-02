@@ -1,0 +1,266 @@
+/* background styles */
+
+.background {
+    background-image: url("../images/guy-min.png");
+    background-repeat: no-repeat;
+    background-position-y: 2.5vw;
+    background-position-x: 50vw;
+    background-size: 50%;
+}
+
+/* header styles */
+
+.header {
+    background-color: transparent;
+    background: transparent;
+    border-color: transparent;
+    background-color: rgba(255, 255, 255, 0);
+    font-family: "Intro";
+    margin: 0 4vw;
+    padding: 0;
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    margin: 1vw;
+}
+
+.logo__container {
+    width: 3vw;
+    padding-top: 1vw;
+}
+
+.header__link {
+    color: rgba(0, 0, 0, 1);
+    text-decoration: none;
+    font-size: 1.5vw;
+    margin-left: 1vw;
+}
+
+.header__link:hover {
+    color: rgba(0, 0, 0, 1);
+    text-decoration: none;
+}
+
+.header__title {
+    margin: 0.5vw 0 0 0;
+    font-size: 2.5vw;
+}
+
+.header__btn {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    margin: 0.5vw 1.6vw 0.5vw 2vw;
+    
+}
+
+.btn {
+    border-radius: 100px;
+    background-color: rgba(82, 34, 208, 1);
+    border: none;
+    padding-right: 1.2vw;
+    font-family: "Intro";
+    font-size: 0.9vw;
+}
+
+.btn:hover {
+    background-color: rgba(236, 97, 91, 1);
+    border: none;
+    cursor: pointer;
+}
+
+.btn:active,
+.btn:focus {
+    box-shadow: none;
+    outline: none;
+    border: none;
+}
+
+.btn__text {
+    font-family: "Intro";
+    margin: 0.5vw
+}
+
+.btn__img-container {
+    width: 1vw;
+    margin-bottom: 0.55vw;
+}
+
+
+/* container styles */
+
+.container-fluid {
+    margin: 0;
+    padding: 0 5.5vw 0 8.9vw;
+}
+
+
+/* offer styles */
+
+.container__offer {
+    width: 39vw;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    margin-left: -4vw;
+    padding: 4vw;
+}
+
+.offer__title {
+    font-family: "Intro";
+    font-size: 3.6vw;
+}
+
+.offer__text {
+    font-family: "RobotoSlab";
+    font-size: 1.3vw;
+    margin-top: 1.8vw;
+}
+
+.offer__btn {
+    width: 12.6vw;
+    font-size: 1.5vw;
+    display: flex;
+    padding: 0.6vw 1vw 0.6vw 1.4vw;
+    margin-top: 1.8vw;
+}
+
+.offer__btn div {
+    width: 2vw;
+    margin: 0.2vw 0 0 0.3vw;
+
+}
+
+/* opportunities styles */
+
+.opportunities {
+    display: none;
+}
+
+.opportunities__body {
+    margin-top: 2vw;
+}
+
+.opportunities__description {
+    margin-top: 0;
+}
+
+.opportunities__description:nth-child(2) div{
+    margin-bottom: -0.6vw;;
+}
+
+.opportunities__title_big {
+    font-family: "Intro";
+    font-size: 4vw;
+    padding: 4vw 0 2vw 0;
+
+}
+
+.opportunities__title_medium {
+    font-family: "Intro";
+    font-size: 2.2vw;
+    padding: 2vw 0 0 0 ;
+}
+
+.opportunities__title_white {
+    color: rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 1);
+}
+
+.opportunities__text {
+    font-family: "RobotoSlab";
+    font-size: 1.4vw;
+    width: 26vw;
+    line-height: 2.45vw;
+}
+
+.opportunities__subscribe {
+    background-color: rgba(236, 97, 91, 1);
+    width: 25vw;
+    padding: 0 2.5vw 3vw 2.5vw;
+    margin: 0 1vw 0 1vw;
+}
+
+.opportunities__description_mini {
+    padding: 0.8vw;
+}
+
+.opportunities__form input {
+    font-family: "RobotoSlab";
+    border: none;
+    border-radius: 0;
+    padding: 1vw;
+    font-size: 1vw;
+}
+
+.opportunities__form input:focus,
+.opportunities__form input:active {
+    box-shadow: none;
+    outline: none;
+    border-color: rgba(82, 34, 208, 1);
+}
+
+.opportunities__form button {
+    padding: 0.9vw 1.5vw 0.7vw 1.5vw;
+}
+
+
+/* footer and menu styles */
+
+.footer {
+    margin: 3vw 0 -2vw 9vw;
+    padding-bottom: 2vw;
+    font-family: "RobotoSlab";
+    font-size: 1vw;
+}
+
+.menu__container,
+.nav-tabs,
+.nav-link {
+    border: 0px solid transparent !important;
+    color: rgba(82, 34, 208, 1);
+}
+
+.menu__container:hover,
+.nav-tabs:hover,
+.nav-link:hover {
+    color: rgba(236, 97, 91, 1);
+}
+
+.menu__container:active,
+.menu__container:focus,
+.nav-tabs:active,
+.nav-tabs:focus,
+.nav-link:active
+.nav-link:focus {
+    color: rgba(236, 97, 91, 1);
+}
+
+/* zero blocks */
+
+.develop {
+    padding: 2vw 0 14.6vw 0;
+}
+
+/* global styles */
+
+img {
+    width: 100%;
+}
+
+@font-face {
+    font-family: "RobotoSlab"; 
+    src: url("../fonts/RobotoSlab.woff");
+} 
+
+@font-face {
+    font-family: "Intro"; 
+    src: url("../fonts/Intro.woff");
+} 

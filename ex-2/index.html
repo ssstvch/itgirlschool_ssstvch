@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/images/icons/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <title>Виарушка</title>
+</head>
+
+<body class="background">
+
+        <header class="header navbar navbar-expand-lg">
+                <article class="header__logo logo">
+                    <div class="logo__container">
+                        <img src="./assets/images/logo-min.png" alt="Виарушка" class="logo__icon logo">
+                    </div>
+                    <h2 class="header__title"><a href="#" class="header__link">Виарушка</a></h2>
+                </article>
+                <button class="header__btn btn btn-primary">
+                    <p class="btn__text">Корзина</p>
+                    <div class="btn__img-container img-container">
+                        <img src="./assets/images/icons/basket.svg" alt="Корзина" class="img-container__icon">
+                    </div>
+                </button>
+        </header>
+    
+        <main class="container-fluid ">
+
+            <section class="container__offer offer card" id="offer" role="tabpanel" aria-labelledby="opportunities-tab">
+                <h1 class="offer__title card-title">Виртуальная реальность без проводов</h1>
+                <p class="offer__text card-text">Лучшее, что случалось с виртуальным миром в реальности. Новый компактный шлем без проводов и дорогих компьютеров</p>
+                <button href="#" class="offer__btn btn btn-primary purple-btn">
+                    <p class="btn__text">Купить</p>
+                    <div class="btn__img-container">
+                        <img src="./assets/images/icons/card.svg" alt=" Купить" class="btn__icon">
+                    </div>
+                </button>    
+            </section>
+    
+            <section class="container__opportunities opportunities" id="opportunities" role="tabpanel" aria-labelledby="opportunities-tab">
+                <h2 class="opportunities__title_big">Возможности</h2>
+                <article class="row row-cols-3 justify-content-center g-5 opportunities__body">
+                    <article class="col opportunities__description">
+                        <div class="opportunities__img-container">
+                            <img src="./assets/images/image_1-min.png" alt="Без проводов" class="opportunities__image"> 
+                        </div>
+                        <h3 class="opportunities__title_medium">Без проводов</h3>
+                        <p class="opportunities__text">Шлем работает без проводов. <br> Не нужен ни компьютер, <br> ни внешнее питание, ни большое помещение, чтобы расставить трекеры.</br>
+                    </article>
+                    <article class="col opportunities__description">
+                        <div class="opportunities__img-container">
+                            <img src="./assets/images/image_2-min.png" alt="Без компьютера" class="opportunities__image"> 
+                        </div>
+                        <h3 class="opportunities__title_medium">Без компьютера</h3>
+                        <p class="opportunities__text">Современный VR-шлемам нужен моный компьютер, чтобы запускать игры. Наш шлем запускает игры из облака, поэтому просто наслаждайтесь.</p>
+                    </article>
+                    <article class="col opportunities__description">
+                        <div class="opportunities__img-container">
+                            <img src="./assets/images/image_3-min.png" alt="До 10 часов работы" class="opportunities__image"> 
+                        </div>
+                        <h3 class="opportunities__title_medium">До 10 часов работы</h3>
+                        <p class="opportunities__text">Несмотря на компактность <br> и производительность, шлем может работать до 10 часов - даже, если вы играете в самые <br> ресурсоемкие игры.</p>
+                    </article>
+                    <article class="col opportunities__description opportunities__description_mini">
+                        <h3 class="opportunities__title_medium">Сотни игр</h3>
+                        <p class="opportunities__text">Уже сейчас вам доступно более сотни игр от высокобюджетных ААА-тайтлов до маленьких независимых проектов. Скоро <br> их станет ещё больше.</p>
+                    </article>
+                    <article class="col opportunities__description opportunities__description_mini">
+                        <h3 class="opportunities__title_medium">Почти даром</h3>
+                        <p class="opportunities__text">По сравнению с другими VR-шлемами наш стоит гораздо меньше. И вы существенно экономите на мощном компьютере.</p>
+                    </article>
+                    <article class="col opportunities__subscribe">
+                        <form class="opportunities__form">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label opportunities__title_medium opportunities__title_white">Новости</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Эл. почта">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Подписаться</button>
+                        </form>
+                    </article>
+                </article>
+            </section>
+
+            <section class="container__opportunities opportunities" id="delivery" role="tabpanel" aria-labelledby="opportunities-tab">
+                <h2 class="opportunities__title_big">Доставка</h2>
+                <article class="row row-cols-3 justify-content-center g-5 opportunities__body">
+                    <p class="opportunities__text develop">
+                        Раздел в разработке
+                    </p>
+                </article>
+            </section>
+
+            <section class="container__opportunities opportunities" id="help" role="tabpanel" aria-labelledby="opportunities-tab">
+                <h2 class="opportunities__title_big">Помощь</h2>
+                <article class="row row-cols-3 justify-content-center g-5 opportunities__body">
+                    <p class="opportunities__text develop">
+                        Раздел в разработке
+                    </p>
+                </article>
+            </section>
+
+        </main>
+
+    <footer class="footer">
+        <nav class="menu">
+            <ul class="menu__container nav nav-tabs" id="myTab" role="tablist">
+                <li class="menu__list nav-item">
+                    <button class="nav-link fade show" id="opportunities-tab" data-bs-toggle="tab" data-bs-target="#opportunities" type="button" role="tab" aria-controls="opportunities" aria-selected="true">Возможности</button>
+                </li>
+                <li class="menu__list nav-item">
+                    <button class="nav-link fade show active" id="offer-tab" data-bs-toggle="tab" data-bs-target="#offer" type="button" role="tab" aria-controls="offer" aria-selected="true">Где купить</button>
+                </li>
+                <li class="menu__list nav-item">
+                    <button class="nav-link fade show" id="delivery-tab" data-bs-toggle="tab" data-bs-target="#delivery" type="button" role="tab" aria-controls="delivery" aria-selected="true">Доставка</button>
+                </li>
+                <li class="menu__list nav-item">
+                    <button class="nav-link fade show" id="help-tab" data-bs-toggle="tab" data-bs-target="#help" type="button" role="tab" aria-controls="help" aria-selected="true">Помощь</button>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+
+    <div id="test">
+        <div>
+            <p></p>
+        </div>
+        <span></span>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="./assets/scripts/index.js"></script>
+
+</body>
+</html>
