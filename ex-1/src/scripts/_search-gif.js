@@ -70,6 +70,9 @@ const show_search_result = (result) => {
 }
 
 async function get_answer_giphy() {
+
+    event.preventDefault()
+
     let request_text = document.querySelector(`.form__input`).value;
 
     const get_result = await fetch(
