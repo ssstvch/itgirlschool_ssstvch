@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Open+Sans:wght@300;400&display=swap');
+
+$center: 0 auto;
+$heading: 'Montserrat', sans-serif;
+$text: 'Open Sans', sans-serif;
+
+body {
+    margin: $center;
+    font-family: $text;
+}
+
+h1, 
+h2, 
+h3, 
+h4,
+h5,
+h6 {
+    font-family: $heading;
+    margin: 0;
+    padding: 0;
+}
+
+.hidden {
+	display: none;
+}

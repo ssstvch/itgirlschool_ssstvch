@@ -60,7 +60,7 @@
 
     в файле приложения:
 
-    import React from ('./React.js');
+    import React from ('react');
     import './App.css';
     import './components/Example.css';
     import Example from './components/Example'

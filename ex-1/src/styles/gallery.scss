@@ -1,0 +1,30 @@
+@import './mixins.scss';
+
+.gallery {
+    width: 98vw;
+    margin: 0 auto;
+    margin-bottom: 2vw;
+
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(18vw, 1fr) );
+    grid-template-rows: 55vw;
+    grid-gap: 0.5vw;
+
+    
+    @include for-tablet-landscape-up {
+        grid-template-rows: 88vw;
+
+    }
+
+    @include for-tablet-portrait-up {
+        grid-template-columns: repeat( auto-fit, minmax(25vw, 1fr) );
+        grid-template-rows: 115vw; 
+    
+    }
+
+    @include for-phone-only {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 250vw; 
+    
+    }
+}
