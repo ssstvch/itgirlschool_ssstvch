@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Open+Sans:wght@300;400&display=swap');
+@import './styles/base/01_normalize.scss';
+@import './styles/base/mixins.scss';
+@import './styles/global/fonts.scss';
+@import './styles/global/global.scss';
+@import './styles/global/svg.scss';
 
 $center: 0 auto;
 $heading: 'Montserrat', sans-serif;

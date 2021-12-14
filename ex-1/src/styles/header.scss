@@ -1,4 +1,4 @@
-@import './mixins.scss'; 
+@import '../App.scss';
 $center: 0 auto;
 
 
@@ -22,7 +22,6 @@ $center: 0 auto;
         font-size: 5vw;
     }
     
-
     @include for-phone-only {
         font-size: 8vw;
     }
