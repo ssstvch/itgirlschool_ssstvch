@@ -115,8 +115,6 @@ const heroes =  [
         }
 ];
 
-console.log(JSON.parse)
-
 const Gallery = () => {
     return(
         <React.Fragment>
