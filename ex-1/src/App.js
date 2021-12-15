@@ -1,14 +1,14 @@
 import React from 'react';
-import Header from './components/Header';
-import Gallery from './components/Gallery'
+import Card from './components/Card';
 import './App.scss';
 
-
-
-function App() {
+const App = () => {
 
   return (
     <React.Fragment>
+      <section className="tariff-cards">
+        <Card />
+      </section>
     </React.Fragment>
   );
 }

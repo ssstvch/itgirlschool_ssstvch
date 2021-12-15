@@ -1,0 +1,19 @@
+@import '../App.scss';
+
+#profit {
+    width: 16vw;
+    margin: -0.8vw -1vw 0 -1vw;
+    z-index: 2;
+    border: 2px solid $border-color;
+    box-shadow: -6px 1px 10px 2px $shadow-color;
+
+    .tariff__title {
+        &_dark {
+            padding: 3.05vw 7.85vw;
+            top: 10%;
+        }
+    }
+    h2 {
+        padding: 2.2vw 0;
+    }
+}

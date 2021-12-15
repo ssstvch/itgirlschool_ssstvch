@@ -1,15 +1,13 @@
-@import './styles/base/01_normalize.scss';
-@import './styles/base/mixins.scss';
-@import './styles/global/fonts.scss';
-@import './styles/global/global.scss';
+@import './styles/base/_01_normalize.scss';
+@import './styles/base/_mixins.scss';
+@import './styles/global/_fonts.scss';
+@import './styles/global/_global.scss';
+@import './styles/global/variables.scss';
 
-$center: 0 auto;
-$heading: 'Montserrat', sans-serif;
-$text: 'Open Sans', sans-serif;
 
 body {
-    margin: $center;
-    font-family: $text;
+    margin: $margin-center;
+    font-family: $font-family;
 }
 
 h1, 
@@ -18,7 +16,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $heading;
+    font-family: $font-family;
     margin: 0;
     padding: 0;
 }

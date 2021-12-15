@@ -1,0 +1,88 @@
+@import '../App.scss';
+
+.tariff-cards {
+    width: 66vw;
+    padding: 4vw;
+    margin: $margin-center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.1vw;
+    font-family: $font-family;
+}
+
+.tariff {
+    background-color: $bg-card;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 0.85vw;
+    text-align: center;
+
+
+    &__title {
+        color: $text-color-light;
+        padding: 1.5vw 1vw;
+        margin-bottom: 0.1vw;
+        font-size: 1.3vw;
+        font-weight: 800;
+        position: relative;
+        &_dark{
+            padding: 2.22vw 7.2vw;
+            z-index: 1;
+            position: absolute;
+            top: 13%;
+        }
+    }
+
+    &__price {
+        color: $text-color-light;
+        padding: 2vw 0;
+        display: flex;
+        justify-content: center;
+        .price {
+            &__currency {
+                align-self: start;
+            }
+            &__value {
+                font-size: 3.5vw;
+                align-self: auto;
+                margin: 0 0.2vw;
+            }
+            &__period {
+                align-self: flex-end;
+                margin-bottom: 0.6vw;
+
+            }
+        }
+    }
+
+    &__speed {
+        color: $text-color-dark;
+        padding: 2vw 0;
+    }
+
+    &__info {
+        color: $text-color-dark;
+        padding: 1vw 2vw;
+        line-height: 1.6vw;
+    }
+
+    &__dark-wrapper {
+        background-color:$bg-wrapper-dark;
+    }
+}
+
+.unlim300 {
+    background-color: $tariff-300;
+}
+
+.unlim450 {
+    background-color: $tariff-450;
+}
+
+.unlim500 {
+    background-color: $tariff-500;
+}
+
+.unlim1000 {
+    background-color: $tariff-1000;
+}
