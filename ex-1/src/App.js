@@ -9,8 +9,6 @@ function App() {
 
   return (
     <React.Fragment>
-      <Header />
-      <Gallery />
     </React.Fragment>
   );
 }
