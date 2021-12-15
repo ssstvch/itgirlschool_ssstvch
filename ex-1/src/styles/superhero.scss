@@ -40,10 +40,18 @@
         padding: 2vw;
     }
 
+    @include for-phone-only {
+        width: 44vw;
+    }
+
     &__flex-container {
         width: 17.5vw;
         display: grid;
         grid-template-columns: 1fr 1fr;
+
+        @include for-tablet-portrait-up {
+            width: 29vw
+        }
 
         @include for-phone-only {
             width: 40vw;
@@ -60,20 +68,32 @@
 
     &__imgbox {
         margin-top: 0.5vw;
-        width: 10vw;
-        height: 20vh;
         position: relative;
         overflow: hidden;
 
+        @include for-big-desktop-up {
+            width: 10vw;
+            height: 39vh;
+        }
+
+        @include for-desktop-up {
+            width: 8vw;
+            height: 30vh;
+        }
+
+        @include for-tablet-landscape-up {
+            width: 9vw;
+            height: 25vh;
+        }
 
         @include for-tablet-portrait-up {
-            width: 27vw;
-            height: 20vh;
+            width: 16vw;
+            height: 25vh;
         }
 
         @include for-phone-only {
-            width: 27vw;
-            height: 20vh;
+            width: 20vw;
+            height: 26vh;
         }
 
     }
@@ -84,18 +104,31 @@
         top:50%;
         left:50%;
         transform:translate(-50%,-50%);
-        width: 10vw;
-        height: 19vh;
         object-fit:cover;
 
+        @include for-big-desktop-up {
+            width: 7.2vw;
+            height: 38vh;
+        }
+
+        @include for-desktop-up {
+            width: 8vw;
+            height: 30vh;
+        }
+
+        @include for-tablet-landscape-up {
+            width: 7.5vw;
+            height: 25vh;
+        }
+
         @include for-tablet-portrait-up {
-            width: 13vw;
-            height: 20vh;
+            width: 14vw;
+            height: 24vh;
         }
 
         @include for-phone-only {
-            width: 22vw;
-            height: 20vh;
+            width: 20vw;
+            height: 23vh;
         }
     }
 
