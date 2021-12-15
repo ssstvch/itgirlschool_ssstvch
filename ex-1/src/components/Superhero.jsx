@@ -2,7 +2,8 @@ import React from 'react';
 import '../styles/superhero.scss';
 
 const Superhero = (props) => {
-    const {name, activity, universe, alterego, image, friends, superpower, more} = this.props;
+    console.log(this)
+    const {id, name, activity, universe, alterego, image, friends, superpower, more} = props;
     return (<React.Fragment>
         <article className="hero-card">
             <h2 className="hidden">{name}</h2>
