@@ -1,0 +1,26 @@
+@import './styles/base/_01_normalize.scss';
+@import './styles/base/_mixins.scss';
+@import './styles/global/_fonts.scss';
+@import './styles/global/_global.scss';
+@import './styles/global/variables.scss';
+
+
+body {
+    margin: $margin-center;
+    font-family: $font-family;
+}
+
+h1, 
+h2, 
+h3, 
+h4,
+h5,
+h6 {
+    font-family: $font-family;
+    margin: 0;
+    padding: 0;
+}
+
+.hidden {
+	display: none;
+}
