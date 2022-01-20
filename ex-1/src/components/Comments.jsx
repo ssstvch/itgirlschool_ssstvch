@@ -1,7 +1,8 @@
 import { Container, Typography } from "@mui/material";
 import React from "react";
+import Comment from "./Comment";
 
-export const Comments = () => {
+export const Comments = ({ comment }) => {
   return (
     <Container
       sx={{
@@ -21,6 +22,21 @@ export const Comments = () => {
       >
         Comments
       </Typography>
+      {comment.length ? (
+        comment.map((com) => {
+          <Comment
+            key={com.id}
+            id={com.id}
+            author={com.author}
+            theme={com.theme}
+            text={com.text}
+          />;
+        })
+      ) : (
+        <Typography sx={{ textAlign: "center", color: "silver" }}>
+          No comments
+        </Typography>
+      )}
     </Container>
   );
 };

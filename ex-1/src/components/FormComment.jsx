@@ -10,26 +10,7 @@ const inputNames = [
   { id: "comment", label: "Comment" },
 ];
 
-const renderComment = (event) => {
-  console.log(event.target);
-  let inputsNode = document.querySelectorAll(".formInput"),
-    inputs = [];
-  inputsNode.forEach((i) => inputs.push(i.lastChild.firstChild.value));
-
-  for (let value of inputs) {
-    let check = value.replace(/(xxx)|(ххх)|(viagra)/gim, "***");
-
-    if (inputs[0] == value) {
-      return <Typography>{`<b>Имя пользователя:</b> ${check}`}</Typography>;
-    } else if (inputs[1] == value) {
-      return <Typography>{`<b>Тема комментария:</b> ${check}`}</Typography>;
-    } else {
-      return <Typography>{`<b>Текст комментария:</b> ${check}`}</Typography>;
-    }
-  }
-};
-
-const FormComment = () => {
+const FormComment = ({ onclick }) => {
   return (
     <FormControl
       sx={{
@@ -53,7 +34,7 @@ const FormComment = () => {
         return <FormInput key={i.id} label={i.label} />;
       })}
 
-      <FormButton text={`Send`} action={renderComment} />
+      <FormButton text={`Send`} action={onclick} />
     </FormControl>
   );
 };

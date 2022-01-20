@@ -1,0 +1,41 @@
+import { Container, Typography } from "@mui/material";
+import React from "react";
+
+export const Comment = ({ author, theme, text }) => {
+  return (
+    <Container
+      sx={{
+        p: "0.8vw",
+        width: "40vw",
+        border: "1px solid silver",
+        borderRadius: "4px",
+      }}
+    >
+      <Typography variant="p" component="span">
+        {author}
+      </Typography>{" "}
+      <br />
+      <Typography
+        variant="p"
+        component="span"
+        sx={{
+          fontWeight: "bolder",
+        }}
+      >
+        {theme}
+        <br />
+      </Typography>
+      <Typography
+        variant="p"
+        component="span"
+        sx={{
+          wordBreak: "break-word",
+        }}
+      >
+        {text}
+      </Typography>
+    </Container>
+  );
+};
+
+// export default Comment;
