@@ -3,19 +3,6 @@ import FormComment from "./FormComment";
 import { Grid, Container, Typography } from "@mui/material";
 import { Comment } from "./Comment";
 
-const checkComments = () => {
-  let comment = JSON.parse(localStorage.getItem("comments"));
-  comment.map((_, i) => {
-    <Comment
-      author={_.name}
-      theme={_.theme}
-      text={_.comment}
-      key={_.id}
-      id={_.id}
-    />;
-  });
-};
-
 const addDataToStorage = (comment) => {
   comment["id"] = 1;
   localStorage.setItem("comments", JSON.stringify(comment));
@@ -26,14 +13,15 @@ const getSecondStorageData = (comment) => {
   comment["id"] = comments.id + 1;
   let newComments = [comments, comment];
   console.log(newComments);
-  localStorage.setItem("comments", JSON.stringify(newComments));
+  localStorage.setItem("comments", JSON.stringify(newComments.reverse()));
 };
 
 const getStorageData = (comment) => {
   let comments = JSON.parse(localStorage.getItem("comments"));
+  console.log(comments.reverse());
   comment["id"] = comments.length + 1;
   comments.push(comment);
-  console.log(comments);
+  console.log(comments.reverse());
   localStorage.setItem("comments", JSON.stringify(comments));
 };
 
@@ -60,26 +48,29 @@ const renderComment = () => {
     : localStorage.getItem("comments")[0] === "{"
     ? getSecondStorageData(comment)
     : getStorageData(comment);
-
-  console.log(comment);
 };
 
 const Feed = () => {
-  const [comments, setComments] = useState();
+  const [comments, setComments] = useState(
+    JSON.parse(localStorage.getItem("comments"))
+  );
 
-  const addComment = (index) => {
+  const addComment = () => {
     renderComment();
-    setComments(index);
+    setComments(JSON.parse(localStorage.getItem("comments")));
   };
 
   useEffect(() => {
-    let comment = JSON.parse(localStorage.getItem("comments"));
-    console.log(`У нас ${comments} комментариев`);
-    return comment;
-  });
-
-  let comment = JSON.parse(localStorage.getItem("comments"));
-  console.log(comment.length);
+    console.log(
+      `Количество комментариев: ${
+        comments === null
+          ? 0
+          : comments.length === undefined
+          ? 1
+          : comments.length
+      }`
+    );
+  }, [comments]);
 
   return (
     <Grid container spacing={1} sx={{ p: "3vw 2vw" }}>
@@ -104,28 +95,30 @@ const Feed = () => {
           Comments
         </Typography>
 
-        {comment.length === undefined ? (
-          <Comment
-            author={comment.name}
-            theme={comment.theme}
-            text={comment.comment}
-            key={comment.id}
-            id={comment.id}
-          />
-        ) : comment != null ? (
-          comment.map((_, i) => {
-            <Comment
-              author={_.name}
-              theme={_.theme}
-              text={_.comment}
-              key={_.id}
-              id={_.id}
-            />;
-          })
-        ) : (
+        {comments === null ? (
           <Typography sx={{ textAlign: "center", color: "silver" }}>
             No comments
           </Typography>
+        ) : comments.length === undefined ? (
+          <Comment
+            author={comments.name}
+            theme={comments.theme}
+            text={comments.comment}
+            key={comments.id}
+            id={comments.id}
+          />
+        ) : (
+          comments.map((_) => {
+            return (
+              <Comment
+                author={_.name}
+                theme={_.theme}
+                text={_.comment}
+                key={_.id}
+                id={_.id}
+              />
+            );
+          })
         )}
       </Container>
     </Grid>

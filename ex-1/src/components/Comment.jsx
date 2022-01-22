@@ -6,6 +6,7 @@ export const Comment = ({ author, theme, text }) => {
     <Container
       sx={{
         p: "0.8vw",
+        m: "1vw auto",
         width: "40vw",
         border: "1px solid silver",
         borderRadius: "4px",
