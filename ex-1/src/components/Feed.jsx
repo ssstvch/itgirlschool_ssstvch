@@ -116,7 +116,7 @@ const Feed = () => {
                 author={comments.name}
                 theme={comments.theme}
                 text={comments.comment}
-                key={`${comments.theme}-${comments.id}`}
+                key={comments.id}
                 id={comments.id}
                 className={"firstComment"}
               />
@@ -141,7 +141,7 @@ const Feed = () => {
                     author={_.name}
                     theme={_.theme}
                     text={_.comment}
-                    key={`${_.theme}-${_.id}`}
+                    key={_.id}
                     id={_.id}
                     className={index === 0 ? "firstComment" : ""}
                   />
